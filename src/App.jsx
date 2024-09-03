@@ -1,12 +1,9 @@
-import { Button } from "./components/ui/button"
+import LandingPage from "./pages/landing-page/landing-page"
 
 
 function App() {
   return (
-    <>
-      <p1 className='text-red-700'>Hello World</p1>
-      <Button variant='outline'>Test</Button>
-    </>
+    <LandingPage/>
   )
 }
 
