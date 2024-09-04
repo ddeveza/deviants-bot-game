@@ -1,12 +1,12 @@
-import { createBrowserRouter, RouterProvider, useLocation } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Navbar } from "./components/navbar";
+import { PAGES } from "./constant/pages";
 import Deviants from "./pages/deviants/deviants";
 import Incubation from "./pages/incubation/incubation";
 import LandingPage from "./pages/landing-page/landing-page";
-import Onboarding from "./pages/landing-page/onboarding/onboarding";
-import { PAGES } from "./constant/pages";
 import Lore from "./pages/landing-page/lore/lore";
-import { Navbar } from "./components/navbar";
 import IncubationLanding from "./pages/incubation/incubation-landing";
+import Onboarding from "./pages/landing-page/onboarding/onboarding";
 
 const router = createBrowserRouter([
   {
@@ -16,10 +16,10 @@ const router = createBrowserRouter([
   {
     path: PAGES.deviants,
     element: (
-      <>
+      <div className="flex flex-col min-h-screen">
         <Deviants />
         <Navbar />
-      </>
+      </div>
     ),
   },
   {
