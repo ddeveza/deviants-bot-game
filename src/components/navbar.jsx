@@ -24,7 +24,7 @@ export const Navbar = () => {
           <img
             src={PvpLogo}
             alt="PvP Logo"
-            className="w-9 h-9"
+            className="w-12 h-12"
           />
         </button>
         <button className="p-2">
