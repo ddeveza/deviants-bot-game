@@ -3,5 +3,6 @@ export const PAGES = {
   lore:'/lore',
   onboard:'/onboard',
   deviants:'/deviants',
-  incubation:'/incubation'
+  incubation:'/incubation',
+  incubationLanding:'/incubationLanding'
 }

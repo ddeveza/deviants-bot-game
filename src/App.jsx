@@ -6,6 +6,7 @@ import Onboarding from "./pages/landing-page/onboarding/onboarding";
 import { PAGES } from "./constant/pages";
 import Lore from "./pages/landing-page/lore/lore";
 import { Navbar } from "./components/navbar";
+import IncubationLanding from "./pages/incubation/incubation-landing";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     path: PAGES.deviants,
     element: (
       <>
-        <Deviants /> 
+        <Deviants />
         <Navbar />
       </>
     ),
@@ -24,11 +25,15 @@ const router = createBrowserRouter([
   {
     path: PAGES.incubation,
     element: (
-      <>
+      <div className="flex flex-col min-h-screen">
         <Incubation />
         <Navbar />
-      </>
+      </div>
     ),
+  },
+  {
+    path: PAGES.incubationLanding,
+    element: <IncubationLanding />,
   },
   {
     path: PAGES.onboard,
