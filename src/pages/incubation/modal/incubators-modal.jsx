@@ -12,7 +12,7 @@ const IncubatorsModal = ({ children }) => {
       className="max-w-[360px] bg-[#BBBBBB] border-none rounded-3xl p-0 min-h-[400px] translate-y-[-60%]"
     >
       <div className=" bg-white rounded-3xl h-[99%] p-4 ">
-        <div className="flex gap-2 items-center m-auto w-max">
+        <div className="flex gap-2 items-center m-auto w-max pb-2">
           <img
             src={incubatorsUpgradeSVG}
             alt=""
