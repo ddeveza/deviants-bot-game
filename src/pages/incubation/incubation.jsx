@@ -5,9 +5,9 @@ import EnergyBar from "@/assets/svg/energy-bar";
 import IncubButtonUpgrade from "./component/incub-upgrade-button";
 import { BoostButton } from "./component/incub-boost-button";
 import IncubatorsModal from "./modal/incubators-modal";
+import BoostModal from "./modal/boost-modal";
 
 const Incubation = () => {
- 
   return (
     <div className="relative flex bg-[#00CEB5] flex-1  h-ful">
       <div
@@ -24,13 +24,14 @@ const Incubation = () => {
           <IncubatorsModal>
             <IncubButtonUpgrade />
           </IncubatorsModal>
-          <BoostButton />
+          <BoostModal>
+            <BoostButton />
+          </BoostModal>
         </div>
       </div>
       <div className="absolute flex items-center justify-center w-full -bottom-14">
-          <EnergyBar percentage={100}/>
+        <EnergyBar percentage={100} />
       </div>
-      
     </div>
   );
 };
