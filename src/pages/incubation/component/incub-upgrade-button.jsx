@@ -1,5 +1,4 @@
 import { incubatorsUpgradeSVG } from '@/assets';
-import React from 'react'
 
 const IncubButtonUpgrade = () => {
   return (

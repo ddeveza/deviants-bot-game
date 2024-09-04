@@ -1,10 +1,10 @@
 import { CloudSVG } from "@/assets";
-import { UpgradeModal } from "@/components/upgrade-modal";
 import { IncubationCarousel } from "./component/incub-carousel";
 import { StatsContainer } from "./component/stats-container";
 import EnergyBar from "@/assets/svg/energy-bar";
 import IncubButtonUpgrade from "./component/incub-upgrade-button";
 import { BoostButton } from "./component/incub-boost-button";
+import IncubatorsModal from "./modal/incubators-modal";
 
 const Incubation = () => {
  
@@ -21,9 +21,9 @@ const Incubation = () => {
           <IncubationCarousel />
         </div>
         <div className="flex justify-between z-10  pb-10">
-          <UpgradeModal>
+          <IncubatorsModal>
             <IncubButtonUpgrade />
-          </UpgradeModal>
+          </IncubatorsModal>
           <BoostButton />
         </div>
       </div>
