@@ -9,7 +9,7 @@ import BoostModal from "./modal/boost-modal";
 
 const Incubation = () => {
   return (
-    <div className="relative flex bg-[#00CEB5] flex-1  h-ful">
+    <div className="relative flex bg-[#00CEB5] flex-1 h-full">
       <div
         style={{ background: `center no-repeat url(${CloudSVG})`, backgroundSize: "cover" }}
         className="flex flex-col  h-auto w-full justify-between"
