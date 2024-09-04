@@ -1,6 +1,12 @@
 import { flyAngelDeviant, loreBG } from "@/assets";
+import { PAGES } from "@/constant/pages";
+import { useNavigate } from "react-router-dom";
 
 const NewDeviant = () => {
+  const navigate = useNavigate();
+  const handleContinue = () => {
+    navigate(PAGES.deviants)
+  } 
   return (
     <div
       className="min-h-screen flex flex-col items-center justify-center space-y-10"
@@ -19,7 +25,7 @@ const NewDeviant = () => {
       <div>
         <button
           className="rounded-[20px] py-2.5 px-8 text-[161313] bg-white font-extrabold uppercase"
-          onClick={() => {}}
+          onClick={handleContinue}
         >
           Continue
         </button>
