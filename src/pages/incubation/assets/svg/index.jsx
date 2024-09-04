@@ -43,3 +43,5 @@ export const EnergyIcon = () => {
     </svg>
   );
 };
+
+
