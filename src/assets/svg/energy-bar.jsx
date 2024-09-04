@@ -2,7 +2,7 @@
 
 
 const EnergyBar = ({percentage}) => {
-  const clampPercentage = Math.min(100, Math.max(0, 80));
+  const clampPercentage = Math.min(100, Math.max(0, 50));
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
