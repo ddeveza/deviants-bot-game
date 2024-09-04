@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+import { cn } from "@/lib/utils";
+
 export const ShopButton = () => {
   return (
     <div className="relative w-full cursor-pointer ">
@@ -60,7 +63,7 @@ export const ShopButton = () => {
   );
 };
 
-export const CarouselLeft = () => {
+export const CarouselLeft = ({className='relative translate-x-10'}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +71,7 @@ export const CarouselLeft = () => {
       height="32"
       viewBox="0 0 27 32"
       fill="none"
-      className="relative translate-x-10"
+      className={cn(className)}
     >
       <path
         opacity="0.5"
@@ -79,7 +82,7 @@ export const CarouselLeft = () => {
   );
 };
 
-export const CarouselRight = () => {
+export const CarouselRight = ({className='relative translate-x-10'}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +90,7 @@ export const CarouselRight = () => {
       height="32"
       viewBox="0 0 27 32"
       fill="none"
-      className="relative -translate-x-10"
+      className={cn(className)}
     >
       <path
         opacity="0.5"

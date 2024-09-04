@@ -20,6 +20,7 @@ import { DeviantsSVG, ShopSVG, TaskSVG, WalletSVG } from "./svg/nav-svg";
 import { ShardSVG } from "./svg/shard-svg";
 import statSVG from "./svg/stat-bg.svg";
 import { UpgradeSVG } from "./svg/upgrade-svg";
+import incubatorImg from './images/Incubator.png';
 export {
   AngelDeviant,
   BubbleSVG,
@@ -51,4 +52,5 @@ export {
   TaskSVG,
   UpgradeSVG,
   WalletSVG,
+  incubatorImg
 };

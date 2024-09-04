@@ -18,7 +18,7 @@ const Deviants = () => {
         <div className="flex items-center justify-center w-full border">
           <DeviantsCarousel />
         </div>
-        <div className="flex justify-between z-10 border pb-10">
+        <div className="flex justify-between z-10 pb-10">
           <UpgradeModal>
             <UpgradeButton />
           </UpgradeModal>

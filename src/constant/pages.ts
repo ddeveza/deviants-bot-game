@@ -4,5 +4,5 @@ export const PAGES = {
   onboard:'/onboard',
   deviants:'/deviants',
   incubation:'/incubation',
-  incubationLanding:'/incubationLanding'
+  incubationLanding:'/incub-landing'
 }
