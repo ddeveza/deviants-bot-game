@@ -7,7 +7,7 @@ export const UpgradeModal = ({ children }) => {
     <Modal
       triggerButton={children}
       disabledCloseButton={true}
-      className="max-w-xs bg-red-500 border-none rounded-3xl p-0 min-h-[500px] translate-y-[-60%]"
+      className="max-w-xs min-w-s bg-red-500 border-none rounded-3xl p-0 min-h-[500px] translate-y-[-60%]"
     >
       <div className="bg-blue-500 rounded-3xl h-[99%] p-4">
         <div className="flex gap-2 items-center m-auto w-max">
