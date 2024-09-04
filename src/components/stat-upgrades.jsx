@@ -1,7 +1,16 @@
-export const StatUpgrade = ({ attribute, icon, currentLvl, xp }) => {
+import { cn } from "@/lib/utils";
+
+export const StatUpgrade = ({ attribute, icon, currentLvl, xp, iconColor }) => {
   return (
     <div className="flex gap-3 bg-[#E8E8E8] rounded-xl p-1 items-center">
-      <div className="bg-[#3BFBE4] rounded-md w-10 h-10 p-1">{icon}</div>
+      <div
+        className={cn(`rounded-md w-10 h-10 p-1`)}
+        style={{
+          background: iconColor,
+        }}
+      >
+        {icon}
+      </div>
       <div className="flex flex-col">
         <p className="uppercase text-[8px] font-bold">{`upgrade ${attribute}`}</p>
         <p className="uppercase text-[8px] font-bold">

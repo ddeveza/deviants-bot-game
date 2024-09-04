@@ -3,7 +3,7 @@ import { DeviantsSVG, PvpLogo, ShopSVG, TaskSVG, WalletSVG } from "@/assets";
 export const Navbar = () => {
   return (
     <nav
-      className="w-full bg-white fixed bottom-0 h-14"
+      className="w-full bg-white"
       style={{
         WebkitBoxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",
         MozBoxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",

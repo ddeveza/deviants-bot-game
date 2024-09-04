@@ -9,7 +9,7 @@ export const DeviantsCarousel = () => {
         <img
           src={AngelDeviant}
           alt="Deviant"
-          className="w-[70%]"
+          className="w-[90%]"
         />
         <CarouselRight />
       </div>
