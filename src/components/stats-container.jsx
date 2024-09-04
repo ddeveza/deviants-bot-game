@@ -33,7 +33,7 @@ export const StatsContainer = () => {
           />
         </svg>
 
-        {/* {Deviant and Shard Details} */}
+        {/* Profile and Shard Details */}
         <div className="flex justify-between w-full absolute top-2 z-20 font-extrabold max-w-[90%] left-1/2 transform -translate-x-1/2 bg-white rounded-xl py-2 px-3">
           <div className="flex items-center gap-2 bottom-0">
             <Avatar className="bg-gray-600 w-7 h-7">
@@ -58,6 +58,7 @@ export const StatsContainer = () => {
           </div>
         </div>
 
+        {/* Deviant Stats */}
         <div className="flex flex-col space-y-0.5 justify-between w-full absolute top-[58px] z-20  max-w-[90%] left-1/2 transform -translate-x-1/2 bg-white rounded-xl py-2 px-3 uppercase font-extrabold">
           <div className="flex justify-between">
             <div className="flex items-center space-x-0.5">
@@ -76,6 +77,7 @@ export const StatsContainer = () => {
           </div>
         </div>
 
+        {/* Deviant Maturity Progress */}
         <div className="flex flex-col space-y-0.5 justify-between w-full absolute top-[159px] z-20  max-w-[50%] left-4 transform uppercase font-extrabold">
           <div className="flex justify-between">
             <p className="text-[8px]">Deviant maturity</p>
