@@ -91,7 +91,7 @@ export const                      StatsContainer = () => {
         <div className="flex flex-col space-y-0.5 justify-between w-full absolute top-[159px] z-20  max-w-[50%] left-4 transform uppercase font-extrabold">
           <div className="flex justify-between">
             <p className="text-[8px]">Incubation Progress</p>
-            <p className="text-[8px]">{percent}</p>
+            <p className="text-[8px]">{`${percent}%`} </p>
           </div>
           <DeviantMaturityBar percentage={percent}/>
         </div>

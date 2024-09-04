@@ -4,10 +4,12 @@ import { UpgradeButton } from "@/components/upgrade-button";
 import { UpgradeModal } from "@/components/upgrade-modal";
 import { IncubationCarousel } from "./component/incub-carousel";
 import { StatsContainer } from "./component/stats-container";
+import EnergyBar from "@/assets/svg/energy-bar";
 
 const Incubation = () => {
+ 
   return (
-    <div className="flex bg-[#00CEB5] flex-1  h-full">
+    <div className="relative flex bg-[#00CEB5] flex-1  h-full border-2 border-red-600">
       <div
         style={{ background: `center no-repeat url(${CloudSVG})`, backgroundSize: "cover" }}
         className="flex flex-col  h-auto w-full justify-between"
@@ -24,6 +26,9 @@ const Incubation = () => {
           </UpgradeModal>
           <StatsButton />
         </div>
+      </div>
+      <div className="absolute flex items-center justify-center w-full -bottom-14">
+          <EnergyBar percentage={100}/>
       </div>
       
     </div>
