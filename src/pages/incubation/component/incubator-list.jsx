@@ -1,4 +1,3 @@
-import { incubatorsUpgradeSVG } from "@/assets"
 import { incubatorGreenImg, incubatorRedImg, incubatorWhiteImg, incubatorYellowImg } from "../assets/images"
 import Incubator from "./incubator"
 
