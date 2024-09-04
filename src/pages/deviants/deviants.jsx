@@ -1,4 +1,5 @@
-import { AngelDeviant, CloudSVG, LeftRectangle, RightTriangle } from "@/assets";
+import { CloudSVG, LeftRectangle, RightTriangle } from "@/assets";
+import { DeviantsCarousel } from "@/components/deviants-carousel";
 import { StatsContainer } from "@/components/stats-container";
 
 const Deviants = () => {
@@ -6,16 +7,13 @@ const Deviants = () => {
     <div className="bg-[#00CEB5]">
       <div
         style={{ background: `center no-repeat url(${CloudSVG})`, backgroundSize: "cover" }}
-        className="flex flex-col min-h-screen space-y-16"
+        className="flex flex-col min-h-screen space-y-6"
       >
-        <div>
+        <div className=" flex items-center justify-center">
           <StatsContainer />
         </div>
-        <div>
-          <img
-            src={AngelDeviant}
-            alt="Deviant"
-          />
+        <div className="flex items-center justify-center w-full border">
+          <DeviantsCarousel />
         </div>
         <div className="flex justify-between">
           <LeftRectangle />
