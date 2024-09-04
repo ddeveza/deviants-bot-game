@@ -1,10 +1,9 @@
 import { CloudSVG } from "@/assets";
-
 import { StatsButton } from "@/components/stats-button";
-import { StatsContainer } from "@/components/stats-container";
 import { UpgradeButton } from "@/components/upgrade-button";
 import { UpgradeModal } from "@/components/upgrade-modal";
-import { IncubationCarousel } from "./incub-carousel";
+import { IncubationCarousel } from "./component/incub-carousel";
+import { StatsContainer } from "./component/stats-container";
 
 const Incubation = () => {
   return (

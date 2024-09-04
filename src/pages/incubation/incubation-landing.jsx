@@ -1,6 +1,6 @@
 import { CloudSVG, incubatorImg } from "@/assets"
-import { UpperVector } from "./upper-vector";
-import LowerVector from "./lower-vector";
+import { UpperVector } from "./component/upper-vector";
+import LowerVector from "./component/lower-vector";
 import { useNavigate } from "react-router-dom";
 import { PAGES } from "@/constant/pages";
 

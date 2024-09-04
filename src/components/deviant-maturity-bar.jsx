@@ -1,4 +1,8 @@
-export const DeviantMaturityBar = () => {
+/* eslint-disable react/prop-types */
+export const DeviantMaturityBar = ({percentage=52}) => {
+  let total = 198;
+  let value = percentage/100 * total;
+  
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +18,7 @@ export const DeviantMaturityBar = () => {
         maskUnits="userSpaceOnUse"
         x="-1"
         y="0"
-        width="198"
+        width={total}
         height="17"
       >
         <path
@@ -30,7 +34,7 @@ export const DeviantMaturityBar = () => {
         <rect
           x="-2"
           y="-4"
-          width="52"
+          width={value}
           height="28"
           fill="#161313"
         />
