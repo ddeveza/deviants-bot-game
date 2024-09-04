@@ -1,6 +1,4 @@
 import { CloudSVG } from "@/assets";
-import { StatsButton } from "@/components/stats-button";
-import { UpgradeButton } from "@/components/upgrade-button";
 import { UpgradeModal } from "@/components/upgrade-modal";
 import { IncubationCarousel } from "./component/incub-carousel";
 import { StatsContainer } from "./component/stats-container";
@@ -11,7 +9,7 @@ import { BoostButton } from "./component/incub-boost-button";
 const Incubation = () => {
  
   return (
-    <div className="relative flex bg-[#00CEB5] flex-1  h-full border-2 border-red-600">
+    <div className="relative flex bg-[#00CEB5] flex-1  h-ful">
       <div
         style={{ background: `center no-repeat url(${CloudSVG})`, backgroundSize: "cover" }}
         className="flex flex-col  h-auto w-full justify-between"
