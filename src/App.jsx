@@ -5,6 +5,7 @@ import LandingPage from "./pages/landing-page/landing-page"
 import Onboarding from "./pages/landing-page/onboarding/onboarding"
 import { PAGES } from "./constant/pages"
 import Lore from "./pages/landing-page/lore/lore"
+import { Navbar } from "./components/navbar"
 
 
 const router = createBrowserRouter([
@@ -36,9 +37,10 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
+      <Navbar />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
