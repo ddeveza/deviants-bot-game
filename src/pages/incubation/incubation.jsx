@@ -5,6 +5,8 @@ import { UpgradeModal } from "@/components/upgrade-modal";
 import { IncubationCarousel } from "./component/incub-carousel";
 import { StatsContainer } from "./component/stats-container";
 import EnergyBar from "@/assets/svg/energy-bar";
+import IncubButtonUpgrade from "./component/incub-upgrade-button";
+import { BoostButton } from "./component/incub-boost-button";
 
 const Incubation = () => {
  
@@ -22,9 +24,9 @@ const Incubation = () => {
         </div>
         <div className="flex justify-between z-10  pb-10">
           <UpgradeModal>
-            <UpgradeButton />
+            <IncubButtonUpgrade />
           </UpgradeModal>
-          <StatsButton />
+          <BoostButton />
         </div>
       </div>
       <div className="absolute flex items-center justify-center w-full -bottom-14">

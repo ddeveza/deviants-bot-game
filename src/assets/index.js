@@ -21,6 +21,7 @@ import { ShardSVG } from "./svg/shard-svg";
 import statSVG from "./svg/stat-bg.svg";
 import { UpgradeSVG } from "./svg/upgrade-svg";
 import incubatorImg from './images/Incubator.png';
+import incubatorsUpgradeSVG from './svg/Deviants Sm_Red.svg'
 export {
   AngelDeviant,
   BubbleSVG,
@@ -52,5 +53,6 @@ export {
   TaskSVG,
   UpgradeSVG,
   WalletSVG,
-  incubatorImg
+  incubatorImg,
+  incubatorsUpgradeSVG
 };
