@@ -65,36 +65,10 @@ const BoostModal = ({ children }) => {
               <StatUpgrade
                 attribute={"HP"}
                 currentLvl={1}
-                xp={500}
-                icon={<HpSVG />}
-                iconColor={"#3BFBE4"}
-              />
-            </div>
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"Power "}
-                currentLvl={1}
-                xp={500}
-                icon={<PowerSVG />}
-                iconColor={"#FF6A61"}
-              />
-            </div>
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"max energy"}
-                currentLvl={1}
-                xp={200}
-                icon={<EnergySVG />}
-                iconColor={"#06CAFF"}
-              />
-            </div>
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"HP"}
-                currentLvl={1}
-                xp={200}
-                icon={<RestoreSVG />}
-                iconColor={"#3BFBE4"}
+                xp={0.1}
+                
+                iconColor={"white"}
+                isFullUpgrade={true}
               />
             </div>
           </div>
