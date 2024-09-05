@@ -1,15 +1,16 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import { PAGES } from "./constant/pages";
+
+//PAGES
+import Wallet from "./pages/wallet/wallet";
 import Deviants from "./pages/deviants/deviants";
+import Lore from "./pages/landing-page/lore/lore";
 import Incubation from "./pages/incubation/incubation";
 import LandingPage from "./pages/landing-page/landing-page";
-import Lore from "./pages/landing-page/lore/lore";
-import IncubationLanding from "./pages/incubation/incubation-landing";
 import Onboarding from "./pages/landing-page/onboarding/onboarding";
-import Energy from "./assets/svg/energy-bar";
-import EnergyBar from "./assets/svg/energy-bar";
-import { Wallet } from "lucide-react";
+import IncubationLanding from "./pages/incubation/incubation-landing";
+
 
 const router = createBrowserRouter([
   {
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
     path: PAGES.wallet,
     element: (
       <div className="flex flex-col min-h-screen">
-        <Incubation />
+        <Wallet />
         <Navbar />
       </div>
     ),
