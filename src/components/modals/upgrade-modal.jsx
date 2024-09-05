@@ -1,8 +1,8 @@
 import { EnergySVG, HpSVG, PowerSVG, RestoreSVG, UpgradeSVG } from "@/assets";
-import { Modal } from "./modal";
-import { StatUpgrade } from "./stat-upgrades";
-import { Button } from "./ui/button";
-import { DialogClose } from "./ui/dialog";
+import { Modal } from "../modal";
+import { StatUpgrade } from "../stat-upgrades";
+import { Button } from "../ui/button";
+import { DialogClose } from "../ui/dialog";
 
 export const UpgradeModal = ({ children }) => {
   return (

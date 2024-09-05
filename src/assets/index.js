@@ -6,6 +6,7 @@ import flyAngelImg from "./images/Flying-Angel.png";
 import loreBG from "./images/lore-bg.png";
 import lore1 from "./images/Lore1.png";
 import lore2 from "./images/lore2.png";
+
 import lore3 from "./images/lore3.png";
 import lore4 from "./images/lore4.png";
 import onboard1 from "./images/Onboarding1.png";
@@ -17,12 +18,14 @@ import { CarouselLeft, CarouselRight, ShopButton } from "./svg/button-svg";
 import CloudSVG from "./svg/cloud.svg";
 
 import incubatorImg from "./images/Incubator.png";
+import { BottomRightCornerSVG, TopLeftCornerSVG } from "./svg/corner-svg";
 import incubatorsUpgradeSVG from "./svg/Deviants Sm_Red.svg";
 import { DeviantsSVG, ShopSVG, TaskSVG, WalletSVG } from "./svg/nav-svg";
 import { ShardSVG } from "./svg/shard-svg";
 import { UpgradeSVG } from "./svg/upgrade-svg";
 export {
   AngelDeviant,
+  BottomRightCornerSVG,
   BubbleSVG,
   CarouselLeft,
   CarouselRight,
@@ -50,6 +53,7 @@ export {
   ShopButton,
   ShopSVG,
   TaskSVG,
+  TopLeftCornerSVG,
   UpgradeSVG,
   WalletSVG,
 };

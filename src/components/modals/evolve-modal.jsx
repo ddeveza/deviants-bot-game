@@ -1,13 +1,15 @@
-import { flyAngelImg, ShardSVG } from "@/assets";
-import { BottomRightCornerSVG, TopLeftCornerSVG } from "@/assets/svg/corner-svg";
+import { flyAngelImg } from "@/assets";
+import { PAGES } from "@/constant/pages";
 import { cn } from "@/lib/utils";
-import { Modal } from "./modal";
-import { Button } from "./ui/button";
-import { DialogClose } from "./ui/dialog";
+import { useNavigate } from "react-router-dom";
+import { DeviantStat } from "../deviant-stat";
+import { Modal } from "../modal";
+import { Button } from "../ui/button";
+import { DialogClose } from "../ui/dialog";
+export const EvolveModal = ({ children }) => {
+  const hasEnoughShards = true; //NOTE: Add soon
 
-export const StatsModal = ({ children }) => {
-  const hasEnoughShards = false; //NOTE: Add soon
-
+  const navigate = useNavigate();
   return (
     <Modal
       triggerButton={children}
@@ -16,7 +18,7 @@ export const StatsModal = ({ children }) => {
     >
       {/* Outer SVG (Shadow) */}
       <div className="relative">
-        <p className="text-white font-extrabold text-lg uppercase absolute -translate-x-1/2 left-1/2 -top-10">Stats</p>
+        <p className="text-white font-extrabold text-lg uppercase absolute -translate-x-1/2 left-1/2 -top-10">evolve to gesis</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 356 439"
@@ -72,32 +74,34 @@ export const StatsModal = ({ children }) => {
               />
             </g>
           </svg>
+          {/* Deviant Stats */}
           <div className="flex flex-col space-y-3 px-2">
             <DeviantStat
               attribute={"new hp"}
               value={3000}
-              isShard={false}
+              isEvolve={true}
             />
             <DeviantStat
-              attribute={"new max energy"}
+              attribute={"max energy"}
               value={1000}
-              isShard={false}
+              isEvolve={true}
             />
             <DeviantStat
               attribute={"new restore"}
               value={80}
-              isShard={false}
+              isEvolve={true}
             />
             <DeviantStat
               attribute={"new power"}
               value={80}
-              isShard={false}
+              isEvolve={true}
             />
 
             <DeviantStat
               attribute={"shard cost"}
               value={10000}
               isShard={true}
+              isEvolve={true}
             />
           </div>
         </div>
@@ -105,6 +109,7 @@ export const StatsModal = ({ children }) => {
         <div className="flex m-auto mt-6">
           <DialogClose asChild>
             <Button
+              onClick={() => navigate(PAGES.incubationLanding)}
               disabled={!hasEnoughShards}
               className={cn("rounded-full px-7 bg-white text-black font-extrabold uppercase m-auto", !hasEnoughShards ?? "opacity-40")}
             >
@@ -114,29 +119,5 @@ export const StatsModal = ({ children }) => {
         </div>
       </div>
     </Modal>
-  );
-};
-
-const DeviantStat = ({ attribute, value, isShard }) => {
-  return (
-    <div className="flex justify-start px-3 py-1 bg-[#E4E4E4] relative">
-      <div className="absolute top-0 left-0">
-        <TopLeftCornerSVG />
-      </div>
-      <div className="absolute bottom-0 right-0">
-        <BottomRightCornerSVG />
-      </div>
-
-      <p className="text-xs font-bold uppercase">{attribute}</p>
-      <p className="text-3xl font-extrabold absolute right-4 -top-3.5">
-        {isShard ? (
-          <span className="flex items-center gap-1">
-            <ShardSVG className="w-7 h-7" /> {value}
-          </span>
-        ) : (
-          value
-        )}
-      </p>
-    </div>
   );
 };
