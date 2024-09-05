@@ -1,6 +1,8 @@
 import { WalletSVG } from "@/assets";
+import { Avatar } from "@/components/ui/avatar";
+import { Link } from "lucide-react";
 
-export const HeadContainer = () => {
+export const HeadContainer = ({ connected }) => {
   return (
     <div className="relative flex items-center justify-center">
       {/* Darker SVG (shadow) */}
@@ -32,11 +34,27 @@ export const HeadContainer = () => {
           />
         </svg>
       </div>
-      <div className="absolute -translate-y-1/4 flex items-center justify-center z-20">
+      <div className="absolute -translate-y-8 flex items-center justify-center z-20">
         <div className="flex flex-col items-center">
-          <WalletSVG className={"h-9 w-9"} fill="#161313" />
+          {connected ? (
+            <div className=" rounded-full bg-[#0098EA] p-1"> <WalletSVG
+            className={"h-7 w-7"}
+            fill="white"
+          /></div>
+          ) : (
+            <WalletSVG
+              className={"h-9 w-9"}
+              fill="#161313"
+            />
+          )}
           <span className="text-2xl">CONNECT TO</span>
           <span className="text-4xl">TON WALLET</span>
+          {connected && (
+            <span className="flex font-sans font-normal">
+              <Link className="pr-2" />
+              UFT4r65H...U67v2rBx
+            </span>
+          )}
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ const Wallet = () => {
         style={{ background: `center no-repeat url(${bg}) ;`, backgroundSize: "cover" }}
       >
         <div>
-          <HeadContainer />
+          <HeadContainer connected={connected}/>
         </div>
         <div
           className="self-start text-transparent text-[7rem] "
@@ -41,7 +41,7 @@ const Wallet = () => {
           <button
             className="w-[23rem] font-bowlby rounded-[20px] py-2.5 px-8 text-[161313] bg-white"
             style={{
-              boxShadwdow: "3px 6px 5px 0px rgba(0,0,0,0.75)",
+              boxShadwdow: connected ? "2px 3px 0px 1px rgba(0, 0, 0, 0.20)" : "3px 6px 5px 0px rgba(0,0,0,0.75)",
               WebkitBoxShadow: "3px 6px 5px 0px rgba(0,0,0,0.75)",
             }}
             onClick={() => setConnected(!connected)}
