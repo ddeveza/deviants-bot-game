@@ -11,20 +11,35 @@ import { useState } from "react";
 
 const Incubation = () => {
   const [page, setPage] = useState(2);
+  let isEmpty = page === 1 || page == 3;
   let carousel;
 
   switch (page) {
     case 1:
-      carousel = <IncubationCarouselEmpty page={page} setPage={setPage}/>
+      carousel = (
+        <IncubationCarouselEmpty
+          page={page}
+          setPage={setPage}
+        />
+      );
       break;
     case 2:
-      carousel = <IncubationCarousel page={page} setPage={setPage}/>
+      carousel = (
+        <IncubationCarousel
+          page={page}
+          setPage={setPage}
+        />
+      );
       break;
     case 3:
-      carousel = <IncubationCarouselEmpty page={page} setPage={setPage}/>
+      carousel = (
+        <IncubationCarouselEmpty
+          page={page}
+          setPage={setPage}
+        />
+      );
       break;
     default:
-      
       break;
   }
 
@@ -35,23 +50,25 @@ const Incubation = () => {
         className="flex flex-col  h-auto w-full justify-between"
       >
         <div className=" flex items-center justify-center ">
-          <StatsContainer />
+          <StatsContainer isEmpty={isEmpty} />
         </div>
-        <div className="flex items-center justify-center w-full ">
-          {carousel}
-        </div>
+        <div className="flex items-center justify-center w-full ">{carousel}</div>
+
         <div className="flex justify-between z-10  pb-10">
-          <IncubatorsModal>
-            <IncubButtonUpgrade />
-          </IncubatorsModal>
-          <BoostModal>
-            <BoostButton />
-          </BoostModal>
+          {!isEmpty && (
+            <>
+              {" "}
+              <IncubatorsModal>
+                <IncubButtonUpgrade />
+              </IncubatorsModal>
+              <BoostModal>
+                <BoostButton />
+              </BoostModal>{" "}
+            </>
+          )}
         </div>
       </div>
-      <div className="absolute flex items-center justify-center w-full -bottom-14">
-        <EnergyBar percentage={100} />
-      </div>
+      <div className="absolute flex items-center justify-center w-full -bottom-14">{!isEmpty && <EnergyBar percentage={100} />}</div>
     </div>
   );
 };
