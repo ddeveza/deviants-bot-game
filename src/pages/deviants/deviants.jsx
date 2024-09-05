@@ -1,5 +1,6 @@
 import { CloudSVG } from "@/assets";
 import { DeviantsCarousel } from "@/components/deviants-carousel";
+import { StatsModal } from "@/components/stat-modal";
 import { StatsButton } from "@/components/stats-button";
 import { StatsContainer } from "@/components/stats-container";
 import { UpgradeButton } from "@/components/upgrade-button";
@@ -21,7 +22,9 @@ const Deviants = () => {
         <UpgradeModal>
           <UpgradeButton />
         </UpgradeModal>
-        <StatsButton />
+        <StatsModal>
+          <StatsButton />
+        </StatsModal>
       </div>
     </div>
   );

@@ -9,9 +9,9 @@ export const UpgradeModal = ({ children }) => {
     <Modal
       triggerButton={children}
       disabledCloseButton={true}
-      className="max-w-[360px] bg-[#BBBBBB] border-none rounded-3xl p-0 min-h-[300px] translate-y-[-60%]"
+      className="max-w-[360px] bg-[#BBBBBB] border-none rounded-3xl sm:rounded-3xl p-0 min-h-[300px] translate-y-[-60%]"
     >
-      <div className=" bg-white rounded-3xl h-[98%] p-4">
+      <div className="bg-white rounded-3xl h-[98%] p-4">
         <div className="flex gap-2 items-center m-auto w-max">
           <UpgradeSVG className="w-7 h-7" />
           <p className="font-extrabold uppercase text-sm">Deviant Upgrades</p>
