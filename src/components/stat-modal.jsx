@@ -1,10 +1,13 @@
 import { flyAngelImg, ShardSVG } from "@/assets";
 import { BottomRightCornerSVG, TopLeftCornerSVG } from "@/assets/svg/corner-svg";
+import { cn } from "@/lib/utils";
 import { Modal } from "./modal";
 import { Button } from "./ui/button";
 import { DialogClose } from "./ui/dialog";
 
 export const StatsModal = ({ children }) => {
+  const hasEnoughShards = false; //NOTE: Add soon
+
   return (
     <Modal
       triggerButton={children}
@@ -101,7 +104,12 @@ export const StatsModal = ({ children }) => {
 
         <div className="flex m-auto mt-6">
           <DialogClose asChild>
-            <Button className="rounded-full px-7 bg-white text-black font-extrabold uppercase m-auto">Close</Button>
+            <Button
+              disabled={!hasEnoughShards}
+              className={cn("rounded-full px-7 bg-white text-black font-extrabold uppercase m-auto", !hasEnoughShards ?? "opacity-40")}
+            >
+              {hasEnoughShards ? "proceed" : "Not enough shards"}
+            </Button>
           </DialogClose>
         </div>
       </div>
