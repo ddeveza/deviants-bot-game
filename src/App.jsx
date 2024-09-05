@@ -9,6 +9,7 @@ import IncubationLanding from "./pages/incubation/incubation-landing";
 import Onboarding from "./pages/landing-page/onboarding/onboarding";
 import Energy from "./assets/svg/energy-bar";
 import EnergyBar from "./assets/svg/energy-bar";
+import { Wallet } from "lucide-react";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,6 @@ const router = createBrowserRouter([
     element: (
       <div className="flex flex-col min-h-screen">
         <Incubation />
-       
         <Navbar />
       </div>
     ),
@@ -45,6 +45,15 @@ const router = createBrowserRouter([
   {
     path: PAGES.lore,
     element: <Lore />,
+  },
+  {
+    path: PAGES.wallet,
+    element: (
+      <div className="flex flex-col min-h-screen">
+        <Incubation />
+        <Navbar />
+      </div>
+    ),
   },
 ]);
 
