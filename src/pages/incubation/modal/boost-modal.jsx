@@ -2,8 +2,9 @@
 
 import { Modal } from "@/components/modal";
 import { StatUpgrade } from "@/components/stat-upgrades";
-import { EnergySVG, HpSVG, PowerSVG, RestoreSVG } from "@/assets";
+import { EnergySVG, HpSVG, PowerSVG } from "@/assets";
 import { BoostSVG } from "../assets/svg";
+import { BoostItem } from "../component/incub-boost-item";
 
 const BoostModal = ({ children }) => {
   return (
@@ -21,39 +22,24 @@ const BoostModal = ({ children }) => {
           <p className="text-xs uppercase my-2">Regular Boosts</p>
           <div className="grid grid-cols-2 gap-2">
             <div className="col-span-1">
-              <StatUpgrade
-                attribute={"HP"}
-                currentLvl={1}
-                xp={500}
-                icon={<HpSVG />}
-                iconColor={"#3BFBE4"}
+              <BoostItem
+                isPremium={false}
+                title={"Efficiency Enhancer"}
+                shardsValue={200}
               />
             </div>
             <div className="col-span-1">
-              <StatUpgrade
-                attribute={"Power "}
-                currentLvl={1}
-                xp={500}
-                icon={<PowerSVG />}
-                iconColor={"#FF6A61"}
+              <BoostItem
+                isPremium={false}
+                title={"Efficiency Enhancer"}
+                shardsValue={200}
               />
             </div>
             <div className="col-span-1">
-              <StatUpgrade
-                attribute={"max energy"}
-                currentLvl={1}
-                xp={200}
-                icon={<EnergySVG />}
-                iconColor={"#06CAFF"}
-              />
-            </div>
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"HP"}
-                currentLvl={1}
-                xp={200}
-                icon={<RestoreSVG />}
-                iconColor={"#3BFBE4"}
+              <BoostItem
+                isPremium={false}
+                title={"Efficiency Enhancer"}
+                shardsValue={1000}
               />
             </div>
           </div>
@@ -62,13 +48,10 @@ const BoostModal = ({ children }) => {
           <p className="text-xs uppercase my-2">Premium Boost</p>
           <div className="grid grid-cols-2 gap-2">
             <div className="col-span-1">
-              <StatUpgrade
-                attribute={"HP"}
-                currentLvl={1}
-                xp={0.1}
-                
-                iconColor={"white"}
-                isFullUpgrade={true}
+              <BoostItem
+                isPremium
+                title={"Skip Incubation"}
+                tonValue={1}
               />
             </div>
           </div>
