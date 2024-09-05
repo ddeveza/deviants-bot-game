@@ -1,10 +1,13 @@
-import { BubbleSVG, flyAngelImg, ShardSVG, ShopButton } from "@/assets";
-import { DeviantMaturityBar } from "./deviant-maturity-bar";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Progress } from "./ui/progress";
+import { flyAngelImg, ShardSVG, ShopButton } from "@/assets";
+
+
+import { DeviantMaturityBar } from "@/components/deviant-maturity-bar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Progress } from "@/components/ui/progress";
+import { ClockIcon, EnergyIcon, TapReductionIcon } from "../assets/svg";
 
 export const                      StatsContainer = () => {
-  let percent = 25; 
+  let percent = 10; 
   return (
     <div className="relative">
       {/* Darker SVG (shadow) */}
@@ -55,7 +58,7 @@ export const                      StatsContainer = () => {
           </div>
           <div className="flex space-x-1 items-center">
             <ShardSVG className="w-5 h-5" />
-            <p className="font-extrabold text-[14px]">4 000</p>
+            <p className="font-extrabold text-[14px]">0</p>
           </div>
         </div>
 
@@ -63,26 +66,32 @@ export const                      StatsContainer = () => {
         <div className="flex flex-col space-y-0.5 justify-between w-full absolute top-[58px] z-20  max-w-[90%] left-1/2 transform -translate-x-1/2 bg-white rounded-xl py-2 px-3 uppercase font-extrabold">
           <div className="flex justify-between">
             <div className="flex items-center space-x-0.5">
-              <BubbleSVG />
-              <p className="text-sm">Deviant Type</p>
+              <ClockIcon />
+              <p className="text-[10px]">Incubation Time</p>
             </div>
-            <p className="text-[#161313]">angel</p>
+            <p className="text-[#161313] text-xl">01:52:46</p>
           </div>
           <div className="flex justify-between">
-            <p className="text-xs">Deviant Level</p>
-            <p className="text-sm">Natura</p>
+            <div className="flex items-center space-x-0.5">
+              <TapReductionIcon />
+              <p className="text-[10px]">Time Reducation Per Tap</p>
+            </div>
+            <p className="text-sm">1s</p>
           </div>
           <div className="flex justify-between">
-            <p className="text-xs">Deviant XP</p>
-            <p className="text-sm">245/1000</p>
+            <div className="flex items-center space-x-0.5">
+              <EnergyIcon />
+              <p className="text-[10px]">Available Energy</p>
+            </div>
+            <p className="text-sm">75/1000</p>
           </div>
         </div>
 
         {/* Deviant Maturity Progress */}
         <div className="flex flex-col space-y-0.5 justify-between w-full absolute top-[159px] z-20  max-w-[50%] left-4 transform uppercase font-extrabold">
           <div className="flex justify-between">
-            <p className="text-[8px]">Deviant maturity</p>
-            <p className="text-[8px]">{`${percent}%`}</p>
+            <p className="text-[8px]">Incubation Progress</p>
+            <p className="text-[8px]">{`${percent}%`} </p>
           </div>
           <DeviantMaturityBar percentage={percent}/>
         </div>

@@ -1,11 +1,10 @@
+/* eslint-disable react/prop-types */
 import { cn } from "@/lib/utils";
 
-export const ShardSVG = ({ className }) => {
+export const ShardSVG = ({ className='h-5 w-5' }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
       viewBox="0 0 20 20"
       fill="none"
       className={cn(className)}

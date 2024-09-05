@@ -9,7 +9,7 @@ export const DeviantsCarousel = () => {
         <img
           src={AngelDeviant}
           alt="Deviant"
-          className="w-[70%]"
+          className="w-[90%]"
         />
         <CarouselRight />
       </div>
@@ -29,7 +29,7 @@ export const DeviantsCarousel = () => {
             rx="4.70492"
             ry="4.72973"
             fill="white"
-            fill-opacity="0.8"
+            fillOpacity="0.8"
           />
           <ellipse
             cx="43.9996"
@@ -44,7 +44,7 @@ export const DeviantsCarousel = () => {
             rx="4.70492"
             ry="4.72973"
             fill="white"
-            fill-opacity="0.8"
+            fillOpacity="0.8"
           />
         </svg>
       </div>
