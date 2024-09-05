@@ -3,12 +3,11 @@ import { Navbar } from "./components/navbar";
 import { PAGES } from "./constant/pages";
 import Deviants from "./pages/deviants/deviants";
 import Incubation from "./pages/incubation/incubation";
+import IncubationLanding from "./pages/incubation/incubation-landing";
 import LandingPage from "./pages/landing-page/landing-page";
 import Lore from "./pages/landing-page/lore/lore";
-import IncubationLanding from "./pages/incubation/incubation-landing";
 import Onboarding from "./pages/landing-page/onboarding/onboarding";
-import Energy from "./assets/svg/energy-bar";
-import EnergyBar from "./assets/svg/energy-bar";
+import Tasks from "./pages/tasks/tasks";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +28,16 @@ const router = createBrowserRouter([
     element: (
       <div className="flex flex-col min-h-screen">
         <Incubation />
-       
+
+        <Navbar />
+      </div>
+    ),
+  },
+  {
+    path: PAGES.tasks,
+    element: (
+      <div className="flex flex-col min-h-screen">
+        <Tasks />
         <Navbar />
       </div>
     ),
