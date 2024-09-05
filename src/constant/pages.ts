@@ -1,6 +1,9 @@
 export const PAGES = {
   home:'/',
+  pvp:'/pvp',
+  shop:'/shop',
   lore:'/lore',
+  wallet:'/wallet',
   tasks: "/tasks",
   onboard:'/onboard',
   deviants:'/deviants',

@@ -9,9 +9,10 @@ import Lore from "./pages/landing-page/lore/lore";
 import Incubation from "./pages/incubation/incubation";
 import IncubationLanding from "./pages/incubation/incubation-landing";
 import LandingPage from "./pages/landing-page/landing-page";
-
 import Onboarding from "./pages/landing-page/onboarding/onboarding";
 import Tasks from "./pages/tasks/tasks";
+import PVP from "./pages/pvp/pvp";
+import Shop from "./pages/shop/shop";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,24 @@ const router = createBrowserRouter([
     element: (
       <div className="flex flex-col min-h-screen">
         <Wallet />
+        <Navbar />
+      </div>
+    ),
+  },
+  {
+    path: PAGES.pvp,
+    element: (
+      <div className="flex flex-col min-h-screen">
+        <PVP />
+        <Navbar />
+      </div>
+    ),
+  },
+  {
+    path: PAGES.shop,
+    element: (
+      <div className="flex flex-col min-h-screen">
+        <Shop />
         <Navbar />
       </div>
     ),
