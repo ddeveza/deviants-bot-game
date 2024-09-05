@@ -52,18 +52,18 @@ const Incubation = () => {
         <div className=" flex items-center justify-center ">
           <StatsContainer isEmpty={isEmpty} />
         </div>
-        <div className="flex items-center justify-center w-full ">{carousel}</div>
+        <div className="flex items-center justify-center w-full  h-full">{carousel}</div>
 
         <div className="flex justify-between z-10  pb-10">
           {!isEmpty && (
             <>
-              {" "}
+             
               <IncubatorsModal>
                 <IncubButtonUpgrade />
               </IncubatorsModal>
               <BoostModal>
                 <BoostButton />
-              </BoostModal>{" "}
+              </BoostModal>
             </>
           )}
         </div>

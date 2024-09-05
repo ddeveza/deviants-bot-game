@@ -1,28 +1,40 @@
 import { CarouselLeft, CarouselRight, incubatorImg } from "@/assets";
 
-export const IncubationCarousel = ({page, setPage}) => {
-  const handleNext=() => {
-    if(page === 2 || page === 1){
-      setPage( prev => prev +1);
+export const IncubationCarousel = ({ page, setPage }) => {
+  const handleNext = () => {
+    if (page === 2 || page === 1) {
+      setPage((prev) => prev + 1);
     }
-  }
-  const handlePrev=() => {
-    if(page === 2 || page === 3){
-      setPage( prev => prev - 1);
+  };
+  const handlePrev = () => {
+    if (page === 2 || page === 3) {
+      setPage((prev) => prev - 1);
     }
-  }
+  };
   return (
-    <div className="flex flex-col items-center">
-      <div className="relative flex justify-between items-center w-full">
-        {page !==1 && <div onClick={handlePrev}><CarouselLeft className="absolute bottom-48 left-5"/></div>}
-        <div>
+    <div className="flex flex-col items-center w-full h-full">
+      <div className="relative w-full h-full">
+        <div
+          onClick={handlePrev}
+          className=" flex items-center justify-center w-full"
+        >
+          <CarouselLeft className="absolute left-4 top-40" />
+        </div>
+
+        <div className="w-full h-72">
           <img
             src={incubatorImg}
             alt="incubator"
-            className=""
+            className="object-fill h-full w-full"
           />
         </div>
-        {page!==3 &&  <div onClick={handleNext}><CarouselRight className="absolute bottom-48 right-5" /></div>}
+
+        <div
+          onClick={handleNext}
+          className="flex items-center justify-center w-full"
+        >
+          <CarouselRight className="absolute right-4 top-40 " />
+        </div>
       </div>
 
       {/* Carousel Navigation SVG */}
