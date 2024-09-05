@@ -1,9 +1,12 @@
 export const PAGES = {
-  home: "/",
-  lore: "/lore",
-  onboard: "/onboard",
-  deviants: "/deviants",
+  home:'/',
+  pvp:'/pvp',
+  shop:'/shop',
+  lore:'/lore',
+  wallet:'/wallet',
   tasks: "/tasks",
-  incubation: "/incubation",
-  incubationLanding: "/incub-landing",
-};
+  onboard:'/onboard',
+  deviants:'/deviants',
+  incubation:'/incubation',
+  incubationLanding:'/incub-landing'
+}

@@ -14,7 +14,7 @@ export const IncubationCarouselEmpty = ({ page, setPage }) => {
   };
   const style = { background: "linear-gradient(90deg, #FFD700 0%, #A78D00 28%, #C6A700 47%, #BB9E00 76.5%, #FFD700 100%)" };
   return (
-    <div className="flex flex-col items-center space-y-4 w-full">
+    <div className="flex flex-col items-center justify-center space-y-4 w-full h-full ">
       <div className="grid grid-cols-3 items-center  w-full ">
         <div
           onClick={handlePrev}

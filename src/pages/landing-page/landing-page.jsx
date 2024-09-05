@@ -21,7 +21,7 @@ const LandingPage = () => {
         className="h-auto"
       />
       <button
-        className="rounded-[20px] py-2.5 px-8 text-[161313] bg-white font-extrabold uppercase"
+        className="font-bowlby rounded-[20px] py-2.5 px-8 text-[161313] bg-white"
         onClick={handlePlay}
       >
         Play Game
