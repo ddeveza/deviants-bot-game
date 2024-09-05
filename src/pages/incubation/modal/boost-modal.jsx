@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 
 import { Modal } from "@/components/modal";
-import { StatUpgrade } from "@/components/stat-upgrades";
-import { EnergySVG, HpSVG, PowerSVG } from "@/assets";
 import { BoostSVG } from "../assets/svg";
 import { BoostItem } from "../component/incub-boost-item";
 
