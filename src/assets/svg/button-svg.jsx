@@ -82,7 +82,7 @@ export const CarouselLeft = ({className='relative translate-x-10'}) => {
   );
 };
 
-export const CarouselRight = ({className='relative translate-x-10'}) => {
+export const CarouselRight = ({className='relative -translate-x-10'}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

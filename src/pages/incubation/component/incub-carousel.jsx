@@ -4,13 +4,16 @@ export const IncubationCarousel = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="relative flex justify-between items-center w-full">
-        <CarouselLeft className="absolute bottom-48 left-5"/>
-        <img
-          src={incubatorImg}
-          alt="incubator"
-          className="object-contain w-[100%]"
-        />
-        <CarouselRight className="absolute bottom-48 right-5"/>
+        <CarouselLeft className="absolute bottom-48 left-5" />
+        <div>
+          <img
+            src={incubatorImg}
+            alt="incubator"
+            className="h-[450px] object-fill"
+          />
+        </div>
+
+        <CarouselRight className="absolute bottom-48 right-5" />
       </div>
 
       {/* Carousel Navigation SVG */}
