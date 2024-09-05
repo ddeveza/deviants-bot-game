@@ -7,7 +7,7 @@ const incubators = [
       src:incubatorGreenImg,
       version:2,
       value: 10000,
-      isAllowUpgrade:false,
+      isAllowUpgrade:true,
     },
    {
       src:incubatorRedImg,
