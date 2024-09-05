@@ -1,10 +1,20 @@
 import { CarouselLeft, CarouselRight, incubatorImg } from "@/assets";
 
-export const IncubationCarousel = () => {
+export const IncubationCarousel = ({page, setPage}) => {
+  const handleNext=() => {
+    if(page === 2 || page === 1){
+      setPage( prev => prev +1);
+    }
+  }
+  const handlePrev=() => {
+    if(page === 2 || page === 3){
+      setPage( prev => prev - 1);
+    }
+  }
   return (
     <div className="flex flex-col items-center">
       <div className="relative flex justify-between items-center w-full">
-        <CarouselLeft className="absolute bottom-48 left-5" />
+        {page !==1 && <div onClick={handlePrev}><CarouselLeft className="absolute bottom-48 left-5"/></div>}
         <div>
           <img
             src={incubatorImg}
@@ -12,7 +22,7 @@ export const IncubationCarousel = () => {
             className=""
           />
         </div>
-        <CarouselRight className="absolute bottom-48 right-5" />
+        {page!==3 &&  <div onClick={handleNext}><CarouselRight className="absolute bottom-48 right-5" /></div>}
       </div>
 
       {/* Carousel Navigation SVG */}

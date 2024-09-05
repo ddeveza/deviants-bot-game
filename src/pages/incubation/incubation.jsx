@@ -6,8 +6,28 @@ import IncubButtonUpgrade from "./component/incub-upgrade-button";
 import { BoostButton } from "./component/incub-boost-button";
 import IncubatorsModal from "./modal/incubators-modal";
 import BoostModal from "./modal/boost-modal";
+import { IncubationCarouselEmpty } from "./component/incub-empty-carousel";
+import { useState } from "react";
 
 const Incubation = () => {
+  const [page, setPage] = useState(2);
+  let carousel;
+
+  switch (page) {
+    case 1:
+      carousel = <IncubationCarouselEmpty page={page} setPage={setPage}/>
+      break;
+    case 2:
+      carousel = <IncubationCarousel page={page} setPage={setPage}/>
+      break;
+    case 3:
+      carousel = <IncubationCarouselEmpty page={page} setPage={setPage}/>
+      break;
+    default:
+      
+      break;
+  }
+
   return (
     <div className="relative flex bg-[#00CEB5] flex-1 h-full">
       <div
@@ -18,7 +38,7 @@ const Incubation = () => {
           <StatsContainer />
         </div>
         <div className="flex items-center justify-center w-full ">
-          <IncubationCarousel />
+          {carousel}
         </div>
         <div className="flex justify-between z-10  pb-10">
           <IncubatorsModal>
