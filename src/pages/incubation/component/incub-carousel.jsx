@@ -9,10 +9,9 @@ export const IncubationCarousel = () => {
           <img
             src={incubatorImg}
             alt="incubator"
-            className="h-[450px] object-fill"
+            className=""
           />
         </div>
-
         <CarouselRight className="absolute bottom-48 right-5" />
       </div>
 
