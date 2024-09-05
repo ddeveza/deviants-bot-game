@@ -1,7 +1,9 @@
 import { AngelDeviant, BubbleSVG, CarouselLeft, CarouselRight } from "@/assets";
+import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 
 export const DeviantsCarousel = () => {
+  const canEvolve = false; //NOTE: Add soon
   return (
     <div className="flex flex-col items-center">
       <div className="flex justify-between items-center w-full max-w-[350px] sm:max-w-none">
@@ -49,8 +51,8 @@ export const DeviantsCarousel = () => {
         </svg>
       </div>
       <Button
-        disabled
-        className="flex gap-2 bg-white text-black rounded-full opacity-50 relative px-8 -translate-y-10 font-extrabold uppercase "
+        disabled={!canEvolve}
+        className={cn("flex gap-2 bg-white text-black rounded-full relative px-8 -translate-y-10 font-extrabold uppercase ", !canEvolve ?? "opacity-50")}
       >
         <BubbleSVG />
         Evolve
