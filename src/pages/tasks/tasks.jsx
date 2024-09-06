@@ -1,12 +1,12 @@
+import { LightCloudSVG } from "@/assets";
 import { Progress } from "@/components/ui/progress";
-import { cloudSVG } from "./assets";
-import { TrophySVG } from "./assets/svg/trophy-svg";
+import { TrophySVG } from "./assets";
 import { TaskItem } from "./components/task-item";
 
 const Tasks = () => {
   return (
     <div
-      style={{ background: `center no-repeat url(${cloudSVG}) #20506E`, backgroundSize: "cover" }}
+      style={{ background: `center no-repeat url(${LightCloudSVG}) #20506E`, backgroundSize: "cover" }}
       className="flex flex-col w-full justify-between flex-1 h-full"
     >
       <div className="px-3 mt-10 flex flex-col space-y-5">
@@ -33,7 +33,49 @@ const Tasks = () => {
           </div>
         </div>
 
-        <div className="flex flex-col space-y-3 max-h-[350px] overflow-hidden overflow-y-scroll">
+        <div className="flex flex-col space-y-3 max-h-[500px] overflow-hidden overflow-y-scroll">
+          <TaskItem
+            tasks={"subscribe to deviants telegram"}
+            reward={100}
+            status={"claimed"}
+          />
+          <TaskItem
+            tasks={"win 2 matches using angel"}
+            reward={200}
+            status={"start"}
+            progress={1}
+            goal={2}
+          />
+          <TaskItem
+            tasks={"win one match"}
+            reward={50}
+            status={"claim"}
+            progress={1}
+            goal={1}
+          />
+          <TaskItem
+            tasks={"incubate 1 deviant"}
+            reward={50}
+            status={"start"}
+            progress={0}
+            goal={1}
+          />
+
+          <TaskItem
+            tasks={"share battle match to telegram"}
+            reward={200}
+            status={"start"}
+          />
+          <TaskItem
+            tasks={"log in to the game"}
+            reward={50}
+            status={"claim"}
+          />
+          <TaskItem
+            tasks={"use crystals to purchase in the shop"}
+            reward={100}
+            status={"start"}
+          />
           <TaskItem
             tasks={"subscribe to deviants telegram"}
             reward={100}

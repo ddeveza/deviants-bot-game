@@ -1,53 +1,33 @@
-import { cn } from "@/lib/utils";
-import { walletBGSVG, walletConnectedBGSVG } from "./assets/svg";
-import { HeadContainer } from "./component/head-container";
-import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { PAGES } from "@/constant/pages";
+import { Link } from "react-router-dom";
+import { ShardLeftSVG, ShardRightSVG } from "./assets";
 
 const Wallet = () => {
-  const [connected, setConnected] = useState(false);
-  let bg = connected ? walletConnectedBGSVG : walletBGSVG;
-
   return (
-    <div className={cn("pt-40 relative overflow-hidden font-bowlby flex-1 flex h-full", { "bg-[#515151]": !connected, "bg-[#0098EA]": connected })}>
-      <div
-        className="flex flex-col items-center w-full "
-        style={{ background: `center no-repeat url(${bg}) ;`, backgroundSize: "cover" }}
-      >
-        <div>
-          <HeadContainer connected={connected}/>
+    <div className="flex flex-col space-y-48 flex-1 bg-[#110079]">
+      <div className="flex justify-center mt-48 relative">
+        <div className="absolute left-0 -bottom-10">
+          <ShardLeftSVG />
         </div>
-        <div
-          className="self-start text-transparent text-[7rem] "
-          style={{ WebkitTextStrokeColor: "white", WebkitTextStrokeWidth: 1 }}
-        >
-          Deviant
+        <p className="text-white text-center font-bowlby text-4xl z-10">
+          Connect
+          <br />
+          Accounts
+        </p>
+        <div className="absolute right-0 -top-10">
+          <ShardRightSVG />
         </div>
-
-        <div className="pt-20 grid grid-rows-2 justify-center items-center space-y-3 ">
-          {connected ? (
-            <button
-              className="w-[23rem] font-bowlby text-white rounded-[20px] py-2.5 px-8 text-[161313] bg-[#929292]"
-              style={{
-                boxShadwdow: "box-shadow: 2px 3px 0px 1px rgba(0, 0, 0, 0.20);",
-                WebkitBoxShadow: "3px 6px 5px 0px rgba(22, 19, 19, 0.75) 100%)",
-              }}
-              onClick={() => setConnected(!connected)}
-            >
-              Copy Address
-            </button>
-          ) : (
-            <div />
-          )}
-          <button
-            className="w-[23rem] font-bowlby rounded-[20px] py-2.5 px-8 text-[161313] bg-white"
-            style={{
-              boxShadwdow: connected ? "2px 3px 0px 1px rgba(0, 0, 0, 0.20)" : "3px 6px 5px 0px rgba(0,0,0,0.75)",
-              WebkitBoxShadow: "3px 6px 5px 0px rgba(0,0,0,0.75)",
-            }}
-            onClick={() => setConnected(!connected)}
-          >
-            {connected ? "Remove Wallet" : "Connect"}
-          </button>
+      </div>
+      <div className="flex flex-col items-center space-y-6">
+        <p className="text-white text-sm text-center max-w-[200px]">To secure your Shards, connect your following accounts:</p>
+        <div className="flex flex-col space-y-5 w-[90%]">
+          <Link to={PAGES.walletTon}>
+            <Button className="w-full text-[#281E1E] bg-[#F1F1F1] px-20 py-7 rounded-2xl border-b-4 border-[#9B9B9B] font-bowlby text-2xl hover:text-white">Ton wallet</Button>
+          </Link>
+          <Link to={PAGES.walletTwitter}>
+            <Button className="w-full text-[#281E1E] bg-[#FAFAFA] px-20 py-7 rounded-2xl border-b-4 border-[#BABABA] font-bowlby text-2xl hover:text-white">Twitter / x</Button>
+          </Link>
         </div>
       </div>
     </div>

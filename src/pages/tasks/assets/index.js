@@ -1,3 +1,3 @@
-import cloudSVG from "./svg/cloud.svg";
+import { TrophySVG } from "./svg/trophy-svg";
 
-export { cloudSVG };
+export { TrophySVG };

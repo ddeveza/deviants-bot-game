@@ -4,10 +4,9 @@ import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const location = useLocation();
-  const {pathname} = location;
+  const { pathname } = location;
 
-  let pvpBG = pathname === PAGES.pvp ? 'linear-gradient(180deg, #FF8F5F 0%, #F00 100%)' : "linear-gradient(180deg, #E2DADA 0%, #AAA4A4 100%)"
-
+  let pvpBG = pathname === PAGES.pvp ? "linear-gradient(180deg, #FF8F5F 0%, #F00 100%)" : "linear-gradient(180deg, #E2DADA 0%, #AAA4A4 100%)";
 
   return (
     <nav
@@ -19,16 +18,28 @@ export const Navbar = () => {
       }}
     >
       <div className="flex justify-around w-full h-full relative items-center">
-        <Link className="p-2" to={PAGES.deviants}>
-          <DeviantsSVG className={"h-7 w-7 "} isActive={pathname === PAGES.deviants || pathname === PAGES.incubation}/>
+        <Link
+          className="p-2"
+          to={PAGES.deviants}
+        >
+          <DeviantsSVG
+            className={"h-10 w-10"}
+            isActive={pathname === PAGES.deviants || pathname === PAGES.incubation}
+          />
         </Link>
-        <Link className="p-2" to={PAGES.tasks}  >
-          <TaskSVG className={"h-7 w-7"} isActive={pathname === PAGES.tasks}/>
+        <Link
+          className="p-2"
+          to={PAGES.tasks}
+        >
+          <TaskSVG
+            className={"h-10 w-10"}
+            isActive={pathname === PAGES.tasks}
+          />
         </Link>
         <Link
           to={PAGES.pvp}
           style={{ background: pvpBG, boxShadow: "0 0 0 5px white" }}
-          className="flex items-center justify-center w-14 h-14 rounded-full relative -translate-y-3 z-10"
+          className="flex items-center justify-center w-16 h-16 rounded-full relative -translate-y-3 z-10"
         >
           <img
             src={PvpLogo}
@@ -36,11 +47,23 @@ export const Navbar = () => {
             className="w-12 h-12"
           />
         </Link>
-        <Link className="p-2" to={PAGES.shop}>
-          <ShopSVG className={"h-7 w-7"} isActive={pathname === PAGES.shop}/>
+        <Link
+          className="p-2"
+          to={PAGES.shop}
+        >
+          <ShopSVG
+            className={"h-10 w-10"}
+            isActive={pathname === PAGES.shop}
+          />
         </Link>
-        <Link className="p-2" to={PAGES.wallet}>
-          <WalletSVG className={"h-7 w-7"} isActive={pathname === PAGES.wallet}/>
+        <Link
+          className="p-2"
+          to={PAGES.wallet}
+        >
+          <WalletSVG
+            className={"h-10 w-10"}
+            isActive={pathname === PAGES.wallet || pathname === PAGES.walletTon || pathname === PAGES.walletTwitter}
+          />
         </Link>
       </div>
     </nav>

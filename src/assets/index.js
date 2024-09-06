@@ -7,6 +7,7 @@ import loreBG from "./images/lore-bg.png";
 import lore1 from "./images/Lore1.png";
 import lore2 from "./images/lore2.png";
 
+import incubatorImg from "./images/Incubator.png";
 import lore3 from "./images/lore3.png";
 import lore4 from "./images/lore4.png";
 import onboard1 from "./images/Onboarding1.png";
@@ -16,13 +17,14 @@ import { EnergySVG, HpSVG, PowerSVG, RestoreSVG } from "./svg/attributes-svg";
 import { BubbleSVG } from "./svg/bubble-svg";
 import { CarouselLeft, CarouselRight, ShopButton } from "./svg/button-svg";
 import CloudSVG from "./svg/cloud.svg";
-
-import incubatorImg from "./images/Incubator.png";
 import { BottomRightCornerSVG, TopLeftCornerSVG } from "./svg/corner-svg";
 import incubatorsUpgradeSVG from "./svg/Deviants Sm_Red.svg";
+import LightCloudSVG from "./svg/light-cloud.svg";
 import { DeviantsSVG, ShopSVG, TaskSVG, WalletSVG } from "./svg/nav-svg";
 import { ShardSVG } from "./svg/shard-svg";
 import { UpgradeSVG } from "./svg/upgrade-svg";
+
+import { WalletRoundedIcon } from "./svg/wallet-rounded";
 export {
   AngelDeviant,
   BottomRightCornerSVG,
@@ -39,6 +41,7 @@ export {
   HpSVG,
   incubatorImg,
   incubatorsUpgradeSVG,
+  LightCloudSVG,
   lore1,
   lore2,
   lore3,
@@ -55,5 +58,6 @@ export {
   TaskSVG,
   TopLeftCornerSVG,
   UpgradeSVG,
+  WalletRoundedIcon,
   WalletSVG,
 };

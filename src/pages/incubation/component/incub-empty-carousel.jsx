@@ -37,7 +37,7 @@ export const IncubationCarouselEmpty = ({ page, setPage }) => {
       <div className="flex items-center justify-center w-full">
         <div className="flex items-center px-6 py-1 rounded-3xl bg-white">
           <ShieldSecuritySVG color="black" />
-          <span className="uppercase text-sm font-extrabold">Requires Level 2</span>{" "}
+          <span className="uppercase text-sm font-extrabold py-2">Requires Level 2</span>
         </div>
       </div>
 
@@ -47,7 +47,7 @@ export const IncubationCarouselEmpty = ({ page, setPage }) => {
           style={style}
         >
           <ShieldSecuritySVG color="white" />
-          <span className="uppercase text-sm font-extrabold text-white">Unlock for 2 Ton</span>{" "}
+          <span className="uppercase text-sm font-extrabold text-white py-2">Unlock for 2 Ton</span>
         </div>
       </div>
 
