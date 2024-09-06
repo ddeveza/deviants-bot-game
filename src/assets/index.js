@@ -6,10 +6,10 @@ import flyAngelImg from "./images/Flying-Angel.png";
 import loreBG from "./images/lore-bg.png";
 import lore1 from "./images/Lore1.png";
 import lore2 from "./images/Lore2.png";
-
-import incubatorImg from "./images/Incubator.png";
 import lore3 from "./images/Lore3.png";
 import lore4 from "./images/Lore4.png";
+
+import incubatorImg from "./images/Incubator.png";
 import onboard1 from "./images/Onboarding1.png";
 import onboard2 from "./images/Onboarding2.png";
 import PvpLogo from "./images/PvP-Logo.png";
