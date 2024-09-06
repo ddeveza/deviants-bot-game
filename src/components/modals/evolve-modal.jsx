@@ -111,7 +111,7 @@ export const EvolveModal = ({ children }) => {
             <Button
               onClick={() => navigate(PAGES.incubationLanding)}
               disabled={!hasEnoughShards}
-              className={cn("rounded-full px-7 bg-white text-black font-extrabold uppercase m-auto", !hasEnoughShards ?? "opacity-40")}
+              className={cn("rounded-full px-7 bg-white text-black font-extrabold uppercase m-auto", !hasEnoughShards && "opacity-40")}
             >
               {hasEnoughShards ? "proceed" : "Not enough shards"}
             </Button>

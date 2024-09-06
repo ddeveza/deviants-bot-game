@@ -55,7 +55,7 @@ export const DeviantsCarousel = () => {
       <EvolveModal>
         <Button
           disabled={!canEvolve}
-          className={cn("flex gap-2 bg-white text-black rounded-full relative px-8 -translate-y-10 font-extrabold uppercase ", !canEvolve ?? "opacity-50")}
+          className={cn("flex gap-2 bg-white text-black rounded-full relative px-8 -translate-y-10 font-extrabold uppercase ", !canEvolve && "opacity-50")}
         >
           <BubbleSVG />
           Evolve
