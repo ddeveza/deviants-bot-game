@@ -14,8 +14,8 @@ const LandingPage = () => {
   };
   return (
     <div
-      style={{ background: `top no-repeat url(${cloudSVG}) #CB1800`, backgroundSize: "cover", backgroundPositionY: "60px" }}
-      className="flex flex-col h-full"
+      style={{ background: `top no-repeat url(${cloudSVG}) `, backgroundSize: "cover", backgroundPositionY: "60px" }}
+      className="flex flex-col h-full #CB1800"
     >
       <div
         style={{ background: `top no-repeat url(${flyDevilDeviant})`, backgroundSize: "cover", backgroundPositionY: "60px" }}
