@@ -11,7 +11,7 @@ export const LoreThree = () => {
         <img
           src={pillar}
           alt="Pillar"
-          className="absolute bottom-[30%] left-1/2 -translate-x-1/2  w-[70%]"
+          className="absolute bottom-[30%] left-1/2 -translate-x-1/2  w-[50%]"
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
