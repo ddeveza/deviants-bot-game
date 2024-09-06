@@ -9,13 +9,13 @@ export const DeviantsCarousel = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex justify-between items-center w-full max-w-[350px] sm:max-w-none">
-        <CarouselLeft />
+        <CarouselLeft className={"relative translate-x-10"} />
         <img
           src={AngelDeviant}
           alt="Deviant"
           className="w-[90%]"
         />
-        <CarouselRight />
+        <CarouselRight className={"relative -translate-x-10"} />
       </div>
 
       {/* Carousel Navigation SVG */}

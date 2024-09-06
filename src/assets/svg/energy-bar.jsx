@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
-
-const EnergyBar = ({percentage}) => {
+const EnergyBar = ({ percentage }) => {
   const clampPercentage = Math.min(100, Math.max(0, 50));
   return (
     <svg
@@ -10,14 +9,28 @@ const EnergyBar = ({percentage}) => {
       height="157"
       viewBox="0 0 200 157"
       fill="none"
-    ><defs>
-    <linearGradient id="energyGradient">
-      <stop offset="0%" stopColor="#35DAC9" />
-      <stop offset={`${clampPercentage}%`} stopColor="#35DAC9" />
-      <stop offset={`${clampPercentage}%`} stopColor="#686868" />
-      <stop offset="100%" stopColor="#686868" />
-    </linearGradient>
-  </defs>
+      // className="w-full"
+    >
+      <defs>
+        <linearGradient id="energyGradient">
+          <stop
+            offset="0%"
+            stopColor="#35DAC9"
+          />
+          <stop
+            offset={`${clampPercentage}%`}
+            stopColor="#35DAC9"
+          />
+          <stop
+            offset={`${clampPercentage}%`}
+            stopColor="#686868"
+          />
+          <stop
+            offset="100%"
+            stopColor="#686868"
+          />
+        </linearGradient>
+      </defs>
       <path
         d="M0.412598 100.346C0.412599 87.2683 2.9885 74.3184 7.99324 62.2359C12.998 50.1534 20.3335 39.1749 29.5811 29.9274C38.8286 20.6798 49.8071 13.3443 61.8896 8.33955C73.9721 3.33481 86.922 0.758909 100 0.758911C113.078 0.758913 126.028 3.33482 138.11 8.33956C150.193 13.3443 161.171 20.6798 170.419 29.9274C179.666 39.1749 187.002 50.1534 192.007 62.2359C197.012 74.3184 199.587 87.2683 199.587 100.346L165.43 100.346C165.43 91.7539 163.738 83.2457 160.449 75.3073C157.161 67.369 152.342 60.156 146.266 54.0803C140.19 48.0045 132.977 43.185 125.039 39.8968C117.101 36.6087 108.592 34.9163 100 34.9163C91.4076 34.9163 82.8994 36.6087 74.961 39.8968C67.0227 43.185 59.8097 48.0045 53.734 54.0803C47.6582 60.156 42.8387 67.369 39.5505 75.3073C36.2624 83.2457 34.57 91.7539 34.57 100.346H0.412598Z"
         fill="white"

@@ -13,27 +13,27 @@ export const IncubationCarousel = ({ page, setPage }) => {
   };
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
-      <div className="relative flex flex-col items-center justify-center w-full h-full">
+      <div className="flex items-center justify-between w-full h-full">
         <div
           onClick={handlePrev}
-          className=" flex items-center justify-center w-full"
+          className="absolute left-6"
         >
-          <CarouselLeft className="absolute left-4 translate-y-44" />
+          <CarouselLeft />
         </div>
 
-        <div className="w-full h-72">
+        <div className="w-full">
           <img
             src={incubatorImg}
             alt="incubator"
-            className="object-fill h-full w-full"
+            className="w-full"
           />
         </div>
 
         <div
           onClick={handleNext}
-          className="flex items-center justify-center w-full"
+          className="absolute right-6"
         >
-          <CarouselRight className="absolute right-4 -translate-y-28" />
+          <CarouselRight />
         </div>
       </div>
 
