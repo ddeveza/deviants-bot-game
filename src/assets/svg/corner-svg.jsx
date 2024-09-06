@@ -1,4 +1,4 @@
-export const TopLeftCornerSVG = () => {
+export const TopLeftCornerSVG = ({ color = "black" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,14 +9,14 @@ export const TopLeftCornerSVG = () => {
     >
       <path
         d="M0.25 10.0625V0.0625H10.25"
-        stroke="black"
+        stroke={color}
         stroke-width="4"
       />
     </svg>
   );
 };
 
-export const BottomRightCornerSVG = () => {
+export const BottomRightCornerSVG = ({ color = "black" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -27,8 +27,8 @@ export const BottomRightCornerSVG = () => {
     >
       <path
         d="M10.25 0.0625L10.25 10.0625L0.25 10.0625"
-        stroke="black"
-        stroke-width="4"
+        stroke={color}
+        stroke-width="2"
       />
     </svg>
   );

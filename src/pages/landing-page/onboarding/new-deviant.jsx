@@ -1,18 +1,15 @@
-import { flyAngelDeviant, loreBG } from "@/assets";
+import { flyAngelDeviant } from "@/assets";
 import { PAGES } from "@/constant/pages";
 import { useNavigate } from "react-router-dom";
 
 const NewDeviant = () => {
   const navigate = useNavigate();
   const handleContinue = () => {
-    navigate(PAGES.deviants)
-  } 
+    navigate(PAGES.deviants);
+  };
   return (
-    <div
-      className="min-h-screen flex flex-col items-center justify-center space-y-10 "
-      style={{ background: `no-repeat url(${loreBG})`, backgroundColor: "currentcolor", backgroundSize:'cover' }}
-    >
-      <div className="text-white text-center font-chakra text-2xl font-bold leading-none uppercase max-w-52">
+    <div className="z-10 flex flex-col justify-between items-center my-20 w-full">
+      <div className="text-white text-center font-chakra text-3xl font-bold leading-none uppercase ">
         <div>Meet the</div>
         <div>Angel Deviant</div>
       </div>
@@ -32,6 +29,6 @@ const NewDeviant = () => {
       </div>
     </div>
   );
-}
+};
 
-export default NewDeviant
+export default NewDeviant;

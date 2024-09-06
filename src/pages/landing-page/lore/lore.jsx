@@ -1,25 +1,29 @@
-import { lore1, lore2, lore3, lore4 } from "@/assets";
 import { PAGES } from "@/constant/pages";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { galaxyBG } from "../assets";
+import { LoreOne } from "../components/lore1";
+import { LoreTwo } from "../components/lore2";
+import { LoreThree } from "../components/lore3";
+import { LoreFour } from "../components/lore4";
 
 const Lore = () => {
   const [lore, setLore] = useState(1);
   const navigate = useNavigate();
 
-  let image;
+  let component;
   switch (lore) {
     case 2:
-      image = lore2;
+      component = <LoreTwo />;
       break;
     case 3:
-      image = lore3;
+      component = <LoreThree />;
       break;
     case 4:
-      image = lore4;
+      component = <LoreFour />;
       break;
     default:
-      image = lore1;
+      component = <LoreOne />;
       break;
   }
 
@@ -32,13 +36,16 @@ const Lore = () => {
   };
 
   return (
-    <div className="p-0 min-h-screen">
-      <img
-        src={image}
-        alt="lore"
-        className="w-full"
-        onClick={handleLore}
-      />
+    <div
+      style={{
+        background: `center no-repeat url(${galaxyBG})`,
+        backgroundSize: "100% 145%",
+        backgroundPosition: "0 90%",
+      }}
+      onClick={handleLore}
+    >
+      <div className="absolute inset-0 bg-black opacity-50" />
+      <div className="flex min-h-screen w-full z-10">{component}</div>
     </div>
   );
 };

@@ -1,42 +1,41 @@
-import { onboard1, onboard2 } from "@/assets";
 import { useState } from "react";
+import { galaxyBG } from "../assets";
+import { OnboardingOne } from "../components/onboarding1";
+import { OnboardingTwo } from "../components/onboarding2";
 import NewDeviant from "./new-deviant";
-
 
 const Onboarding = () => {
   const [onboard, setOnboard] = useState(1);
-  let imageSrc;
+  let component;
   switch (onboard) {
     case 1:
-      imageSrc= onboard1;
+      component = <OnboardingOne />;
       break;
-      case 2:
-        imageSrc= onboard2;
-        break;
+    case 2:
+      component = <OnboardingTwo />;
+      break;
     default:
-      imageSrc= onboard1;
+      component = <OnboardingOne />;
       break;
   }
 
   const handleOnboard = () => {
-    setOnboard(prev => prev+1);
-  }
-
+    setOnboard((prev) => prev + 1);
+  };
 
   return (
-    <div className="min-h-screen">
-      {onboard <= 2 ? (
-        <img
-          src={imageSrc}
-          alt="onboard"
-          className="w-full"
-          onClick={handleOnboard}
-        />
-      ) : (
-        <NewDeviant />
-      )}
+    <div
+      style={{
+        background: `center no-repeat url(${galaxyBG})`,
+        backgroundSize: "100% 145%",
+        backgroundPosition: "0 90%",
+      }}
+      onClick={handleOnboard}
+    >
+      <div className="absolute inset-0 bg-black opacity-50" />
+      <div className="flex min-h-screen w-full z-10">{onboard <= 2 ? component : <NewDeviant />}</div>
     </div>
   );
-}
+};
 
-export default Onboarding
+export default Onboarding;
