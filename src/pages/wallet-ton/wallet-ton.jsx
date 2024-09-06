@@ -8,12 +8,12 @@ import { WalletLeftSVG, WalletRightSVG } from "./assets/svg/wallet-bg-icon";
 const WalletTon = () => {
   const [connected, setConnected] = useState(false);
 
-  let bg = connected ? `center no-repeat url(${LightCloudSVG}) #0098EA` : `center no-repeat url(${LightCloudSVG}) #515151`;
+  let bg = connected ? `center no-repeat url(${LightCloudSVG}), ` : `center no-repeat url(${LightCloudSVG})`;
 
   return (
     <div
       className={cn("flex-1 flex h-full")}
-      style={{ background: bg, backgroundSize: "cover" }}
+      style={{ background: bg, backgroundColor: connected ? "#0098EA" : " #515151", backgroundSize: "cover" }}
     >
       <div className="flex flex-col items-center w-full justify-between">
         {/* Header Container */}

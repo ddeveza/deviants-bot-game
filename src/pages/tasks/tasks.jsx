@@ -6,7 +6,7 @@ import { TaskItem } from "./components/task-item";
 const Tasks = () => {
   return (
     <div
-      style={{ background: `center no-repeat url(${LightCloudSVG}) #20506E`, backgroundSize: "cover" }}
+      style={{ background: `center no-repeat url(${LightCloudSVG}) `,backgroundColor:'#20506E', backgroundSize: "cover" }}
       className="flex flex-col w-full justify-between flex-1 h-full"
     >
       <div className="px-3 mt-10 flex flex-col space-y-5">

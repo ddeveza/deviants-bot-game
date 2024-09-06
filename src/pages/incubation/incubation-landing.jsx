@@ -11,7 +11,7 @@ const IncubationLanding = () => {
   }
   return (
     <div
-      style={{ background: `center no-repeat url(${CloudSVG}) #00CEB5`, backgroundSize: "cover"}}
+      style={{ background: `center no-repeat url(${CloudSVG})`,backgroundColor:'#00CEB5', backgroundSize: "cover"}}
       className="flex flex-col items-center justify-center h-full uppercase"
     >
       <div className="flex flex-col items-center justify-center">
