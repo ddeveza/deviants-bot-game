@@ -9,7 +9,7 @@ import { UpgradeButton } from "@/components/upgrade-button";
 const Deviants = () => {
   return (
     <div
-      style={{ background: `center no-repeat url(${CloudSVG}) #00CEB5`, backgroundSize: "cover" }}
+      style={{ background: `center no-repeat url(${CloudSVG})`,backgroundColor:'#00CEB5', backgroundSize: "cover" }}
       className="flex flex-col w-full justify-between flex-1 h-full"
     >
       <div className=" flex items-center justify-center">
