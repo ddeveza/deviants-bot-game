@@ -29,6 +29,7 @@ const Onboarding = () => {
         <img
           src={imageSrc}
           alt="onboard"
+          className="w-full"
           onClick={handleOnboard}
         />
       ) : (

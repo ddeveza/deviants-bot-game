@@ -36,6 +36,7 @@ const Lore = () => {
       <img
         src={image}
         alt="lore"
+        className="w-full"
         onClick={handleLore}
       />
     </div>

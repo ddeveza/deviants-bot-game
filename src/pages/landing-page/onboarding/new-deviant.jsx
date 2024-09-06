@@ -9,8 +9,8 @@ const NewDeviant = () => {
   } 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center space-y-10"
-      style={{ background: `no-repeat url(${loreBG})`, backgroundColor: "currentcolor" }}
+      className="min-h-screen flex flex-col items-center justify-center space-y-10 "
+      style={{ background: `no-repeat url(${loreBG})`, backgroundColor: "currentcolor", backgroundSize:'cover' }}
     >
       <div className="text-white text-center font-chakra text-2xl font-bold leading-none uppercase max-w-52">
         <div>Meet the</div>

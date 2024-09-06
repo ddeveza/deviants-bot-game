@@ -2,9 +2,12 @@ import { BubbleSVG, flyAngelImg, ShardSVG, ShopButton } from "@/assets";
 import { DeviantMaturityBar } from "./deviant-maturity-bar";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Progress } from "./ui/progress";
+import { PAGES } from "@/constant/pages";
+import { useNavigate } from "react-router-dom";
 
 export const                      StatsContainer = () => {
   let percent = 25; 
+  const navigate = useNavigate();
   return (
     <div className="relative">
       {/* Darker SVG (shadow) */}
@@ -88,7 +91,7 @@ export const                      StatsContainer = () => {
         </div>
       </div>
 
-      <div className="w-[35%] overflow-hidden -bottom-1.5 right-0 absolute">
+      <div className="w-[35%] overflow-hidden -bottom-1.5 right-0 absolute" onClick={()=>navigate(PAGES.shop)}>
         <ShopButton />
       </div>
     </div>
