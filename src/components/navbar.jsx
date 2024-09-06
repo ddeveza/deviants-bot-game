@@ -10,14 +10,14 @@ export const Navbar = () => {
 
   return (
     <nav
-      className="w-full bg-white"
+      className="w-full bg-white relative"
       style={{
         WebkitBoxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",
         MozBoxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",
         boxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",
       }}
     >
-      <div className="flex justify-around w-full h-full relative items-center">
+      <div className="flex justify-around w-full h-full relative items-center ">
         <Link
           className="p-2"
           to={PAGES.deviants}
