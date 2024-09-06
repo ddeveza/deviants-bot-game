@@ -3,16 +3,18 @@ import { Navbar } from "./components/navbar";
 import { PAGES } from "./constant/pages";
 
 //PAGES
-import Wallet from "./pages/wallet/wallet";
 import Deviants from "./pages/deviants/deviants";
-import Lore from "./pages/landing-page/lore/lore";
 import Incubation from "./pages/incubation/incubation";
 import IncubationLanding from "./pages/incubation/incubation-landing";
 import LandingPage from "./pages/landing-page/landing-page";
+import Lore from "./pages/landing-page/lore/lore";
 import Onboarding from "./pages/landing-page/onboarding/onboarding";
-import Tasks from "./pages/tasks/tasks";
 import PVP from "./pages/pvp/pvp";
 import Shop from "./pages/shop/shop";
+import Tasks from "./pages/tasks/tasks";
+import WalletTon from "./pages/wallet-ton/wallet-ton";
+import WalletTwitter from "./pages/wallet-twitter/wallet-twitter";
+import Wallet from "./pages/wallet/wallet";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +65,24 @@ const router = createBrowserRouter([
     element: (
       <div className="flex flex-col min-h-screen">
         <Wallet />
+        <Navbar />
+      </div>
+    ),
+  },
+  {
+    path: PAGES.walletTon,
+    element: (
+      <div className="flex flex-col min-h-screen">
+        <WalletTon />
+        <Navbar />
+      </div>
+    ),
+  },
+  {
+    path: PAGES.walletTwitter,
+    element: (
+      <div className="flex flex-col min-h-screen">
+        <WalletTwitter />
         <Navbar />
       </div>
     ),
