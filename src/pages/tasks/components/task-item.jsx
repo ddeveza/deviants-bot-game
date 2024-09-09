@@ -36,7 +36,7 @@ export const TaskItem = ({ tasks, reward, status, progress, goal }) => {
         >
           <Button
             disabled={status == "claimed"}
-            className="capitalize h-min text-white text-[10px]  font-extrabold rounded-[15px] px-3 py-1"
+            className="capitalize h-min text-white text-[10px] font-bowlbyregular leading-[100%] rounded-[15px] px-3 py-1"
             style={{ background: status === "claimed" || status === "claim" ? "linear-gradient(180deg, #16D3BD -15.5%, #359F93 115.5%)" : "linear-gradient(180deg, #00A8ED -15.5%, #0676B2 115.5%)" }}
           >
             {status}
