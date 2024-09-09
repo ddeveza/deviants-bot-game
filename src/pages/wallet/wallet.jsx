@@ -5,7 +5,7 @@ import { ShardLeftSVG, ShardRightSVG } from "./assets";
 
 const Wallet = () => {
   return (
-    <div className="flex flex-col space-y-48 flex-1 bg-[#110079]">
+    <div className="bg-[#110079] flex flex-col justify-between pb-[8rem] flex-1 size-full">
       <div className="flex justify-center mt-48 relative">
         <div className="absolute left-0 -bottom-10">
           <ShardLeftSVG />

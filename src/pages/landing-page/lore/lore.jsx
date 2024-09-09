@@ -46,7 +46,7 @@ const Lore = () => {
       className="relative size-full"
     >
       <div className="absolute inset-0 bg-black opacity-50" />
-      <div className="flex relative h-full w-full z-10">{component}</div>
+      <div className="flex relative size-full z-10">{component}</div>
     </div>
   );
 };

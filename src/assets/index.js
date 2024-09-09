@@ -19,7 +19,7 @@ import { CarouselLeft, CarouselRight, ShopButton } from "./svg/button-svg";
 import { CloudSVG } from "./svg/CloudSVG";
 import { BottomRightCornerSVG, TopLeftCornerSVG } from "./svg/corner-svg";
 import incubatorsUpgradeSVG from "./svg/Deviants Sm_Red.svg";
-import LightCloudSVG from "./svg/light-cloud.svg";
+import { LightCloudSVG } from "./svg/LightCloudSVG";
 import { DeviantsSVG, ShopSVG, TaskSVG, WalletSVG } from "./svg/nav-svg";
 import { ShardSVG } from "./svg/shard-svg";
 import { UpgradeSVG } from "./svg/upgrade-svg";

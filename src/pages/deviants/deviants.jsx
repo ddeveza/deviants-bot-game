@@ -8,12 +8,9 @@ import { UpgradeButton } from "@/components/upgrade-button";
 
 const Deviants = () => {
   return (
-    <div
-      style={{ backgroundColor: '#00CEB5'}}
-      className="relative flex flex-col w-full justify-between  h-full"
-    >
+    <div className="bg-[#00CEB5] relative flex flex-col size-full justify-between">
       <div className="absolute size-full top-0 left-0 z-[0]">
-        <CloudSVG className="size-full relative"/>
+        <CloudSVG className="size-full relative" />
       </div>
       <div className="relative size-full z-[1]">
         <div className="absolute top-0 left-0 w-full flex items-center justify-center z-[2] ">
@@ -31,7 +28,6 @@ const Deviants = () => {
           </StatModal>
         </div>
       </div>
-
     </div>
   );
 };

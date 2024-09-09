@@ -5,11 +5,12 @@ import { TaskItem } from "./components/task-item";
 
 const Tasks = () => {
   return (
-    <div
-      style={{ background: `center no-repeat url(${LightCloudSVG}) `,backgroundColor:'#20506E', backgroundSize: "cover" }}
-      className="flex flex-col w-full justify-between flex-1 h-full"
-    >
-      <div className="px-3 mt-10 flex flex-col space-y-5">
+    <div className="bg-[#20506E] flex flex-col justify-between size-full">
+      <div className="absolute size-full top-0 left-0 z-[0]">
+        <LightCloudSVG className="size-full relative" />
+      </div>
+
+      <div className="px-3 mt-10 flex flex-col space-y-5 z-[1] border">
         <div className="flex flex-col space-y-1">
           <p className="uppercase font-extrabold text-3xl flex gap-1 items-center text-white">
             <TrophySVG />

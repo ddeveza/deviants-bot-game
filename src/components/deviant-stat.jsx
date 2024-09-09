@@ -4,10 +4,10 @@ export const DeviantStat = ({ attribute, value, isEvolve = false, currentLvl = 1
   return (
     <div className="flex justify-start px-3 py-1 bg-[#E4E4E4] relative">
       <div className="absolute top-0 left-0">
-        <TopLeftCornerSVG />
+        <TopLeftCornerSVG color={"black"} />
       </div>
       <div className="absolute bottom-0 right-0">
-        <BottomRightCornerSVG />
+        <BottomRightCornerSVG color={"black"} />
       </div>
 
       <p className="text-xs font-bold uppercase">{attribute}</p>
