@@ -1,64 +1,20 @@
 /* eslint-disable react/prop-types */
+import SvgFilter from "@/components/ui/svg-filter";
 import { cn } from "@/lib/utils";
 
 export const ShopButton = () => {
   return (
-    <div className="relative w-full cursor-pointer ">
-      {/* Darker SVG (shadow) */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="135"
-        height="40"
-        viewBox="0 0 135 40"
-        fill="none"
-        className="absolute top-1 left-0 z-0 w-full"
-      >
-        <path
-          d="M22.226 3.1906L3.62966 23.1906C-2.31824 29.5875 2.21821 40 10.953 40H125C130.523 40 135 35.5228 135 30V10C135 4.47715 130.523 0 125 0H29.5494C26.771 0 24.1179 1.15589 22.226 3.1906Z"
-          fill="#815F00"
-        />
-      </svg>
-
-      {/* Lighter SVG (main shape) */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="134"
-        height="40"
-        viewBox="0 0 134 40"
-        fill="none"
-        className="relative z-10 w-full"
-      >
-        <path
-          d="M21.6072 3.12811L3.45942 22.3135C-2.57114 28.6888 1.94851 39.1854 10.7242 39.1854H124C129.523 39.1854 134 34.7082 134 29.1854V10C134 4.47715 129.523 0 124 0H28.872C26.1234 0 23.496 1.13132 21.6072 3.12811Z"
-          fill="url(#paint0_linear_488_950)"
-        />
-        <defs>
-          <linearGradient
-            id="paint0_linear_488_950"
-            x1="42.0541"
-            y1="-7.59753e-06"
-            x2="132.297"
-            y2="37.8851"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#DFBB00" />
-            <stop
-              offset="0.27212"
-              stopColor="#C99D00"
-            />
-            <stop
-              offset="0.690781"
-              stopColor="#DFBB00"
-            />
-            <stop
-              offset="1"
-              stopColor="#795700"
-            />
-          </linearGradient>
-        </defs>
-      </svg>
-
-      <p className="absolute inset-0 left-2 flex items-center justify-center z-20 text-white font-bold uppercase">Shop</p>
+    <div className="relative w-full cursor-pointer pb-[6px]">
+      <SvgFilter roundCorner="4" id="shop-filter" />
+      <SvgFilter roundCorner="5" id="shop-filter-shadow" />
+      <div className="btn-shop-shadow-container absolute top-0 left-0 size-full">
+        <div className="btn-shop-shadow size-full"></div>
+      </div>
+      <div className="btn-shop-container w-[9rem] h-[2rem]">
+        <div className="btn-shop size-full flex items-center justify-center">
+        <p className="text-white uppercase pl-4 font-bowlbyregular">Shop</p>
+        </div>
+      </div>
     </div>
   );
 };

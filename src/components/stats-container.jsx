@@ -5,6 +5,7 @@ import { Progress } from "./ui/progress";
 import { PAGES } from "@/constant/pages";
 import { useNavigate } from "react-router-dom";
 import SvgFilter from "./ui/svg-filter";
+import StatsDiv from "./stats-div";
 
 export const StatsContainer = () => {
   let percent = 25;
@@ -16,40 +17,21 @@ export const StatsContainer = () => {
       <SvgFilter roundCorner="4" id="rounded-filter-8" dropShadowColor="#BBBBBB" />
 
       <div className="relative w-full stats-box pb-[8px] h-auto ">
-        <div className="relative w-full stats-box-inner px-2 py-2 gap-y-4 flex flex-col gap-2 justify-between items-start">
+        <div className="relative w-full stats-box-inner px-2 py-2 gap-y-2 flex flex-col gap-2 justify-between items-start">
           {/* Profile and Shard Details */}
-          <div className="relative h-[3rem] flex justify-between w-full font-extrabold gap-2 bg-white rounded-xl py-2 px-3">
-            <div className="flex items-center gap-2 bottom-0">
-              <Avatar className="bg-gray-600 w-7 h-7">
-                <AvatarImage src={flyAngelImg} />
-                <AvatarFallback>CJ</AvatarFallback>
-              </Avatar>
-              <div className="flex flex-col gap-1 justify-center ">
-                <p className="text-[8px] text-[#3F3B3B]">communityjuice</p>
-                <div className="flex flex-col">
-                  <p className="text-[6px] capitalize text-[#606060]">level 1</p>
-                  <Progress
-                    value={33}
-                    className="h-0.5 bg-[#A2A2A2] w-20"
-                    indicatorColor={"bg-black"}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <ShardSVG className="w-5 h-5" />
-              <p className="font-extrabold text-[14px]">4 000</p>
-            </div>
-          </div>
+
+          <StatsDiv level={1} progress={33} className="relative h-[3rem] flex justify-between w-full font-bowlbyregular gap-2 bg-white rounded-xl py-2 px-3" shards={4000} />
+
+
 
           {/* Deviant Stats */}
-          <div className="relative flex flex-col justify-between w-full bg-white rounded-xl py-2 px-3 uppercase font-extrabold">
+          <div className="relative flex flex-col justify-between w-full bg-white rounded-xl py-2 px-3 uppercase font-bowlbyregular">
             <div className="flex justify-between">
               <div className="flex items-center space-x-0.5">
                 <BubbleSVG />
                 <p className="text-sm">Deviant Type</p>
               </div>
-              <p className="text-[#161313]">angel</p>
+              <p className="text-[#161313] text-sm">angel</p>
             </div>
             <div className="flex justify-between">
               <p className="text-xs">Deviant Level</p>
@@ -62,12 +44,12 @@ export const StatsContainer = () => {
           </div>
 
           {/* Deviant Maturity Progress */}
-          <div className="relative h-[3rem] w-full flex justify-between uppercase font-extrabold">
+          <div className="relative h-[3rem] w-full flex justify-between uppercase ">
 
             <div className="grow-0 shrink-0 flex flex-col justify-end gap-1 stats-box-maturity">
               <div className="flex justify-between">
-                <p className="text-[10px]">Deviant maturity</p>
-                <p className="text-[12px]">{`${percent}%`}</p>
+                <p className="text-[10px] font-bowlbyregular">Deviant maturity</p>
+                <p className="text-[12px] font-bowlbyregular">{`${percent}%`}</p>
               </div>
               <DeviantMaturityBar percentage={percent} className="w-full h-[1.5rem] border" />
             </div>
@@ -76,7 +58,7 @@ export const StatsContainer = () => {
         </div>
 
       </div>
-      <div className="absolute bottom-0 right-0 px-4">
+      <div className="absolute bottom-0 right-0 px-4 pb-1">
         <div className="" onClick={() => navigate(PAGES.shop)}>
           <ShopButton />
         </div>

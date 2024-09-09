@@ -13,7 +13,9 @@ export const UpgradeModal = ({ children }) => {
     >
       <div className="bg-white rounded-3xl h-[98%] p-4">
         <div className="flex gap-2 items-center m-auto w-max">
-          <UpgradeSVG className="w-7 h-7" />
+          <div className="w-7 h-7">
+            <UpgradeSVG className="size-full" />
+          </div>
           <p className="font-extrabold uppercase text-sm">Deviant Upgrades</p>
         </div>
 

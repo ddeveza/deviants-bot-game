@@ -13,14 +13,12 @@
 }
 
 .stats-box {
-  /* clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 3rem), calc(100% - 7rem) calc(100% - 3rem), calc(100% - 10rem) 100%, 0 100%); */
   filter: url('#rounded-filter-8');
 }
 
 .stats-box-inner {
   background-color: #e6e6e6;
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 3rem), calc(100% - 7rem) calc(100% - 3rem), calc(100% - 10rem) 100%, 0 100%);
-  
 }
 
 .stats-box-maturity {
@@ -29,4 +27,37 @@
 
 .deviant-maturity {
   clip-path: polygon(0% 0%, 100% 0%, calc(100% - 1.4rem) 100%, 0 100%);
+}
+
+.btn-shop-container {
+  filter: url('#shop-filter');
+}
+
+.btn-shop-shadow-container {
+  filter: url('#shop-filter-shadow');
+}
+
+.btn-shop {
+  clip-path: polygon(2rem 0%, 100% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(96deg, #DFBB00 33.48%, #C99D00 51.21%, #DFBB00 78.48%, #795700 98.62%);
+}
+
+.btn-shop-shadow {
+  clip-path: polygon(calc(2rem) 0%, 100% 0%, 100% 100%, 2px 100%, 2px calc(100% - 6px));
+  background-color: #795700;
+}
+
+.btn-left-modal-container, .btn-right-modal-container {
+  filter: url('#btn-modal-filter');
+}
+
+.btn-left-modal {
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%);
+  background-color: white;
+}
+
+
+.btn-right-modal {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30px 100%, 0% calc(100% - 30px));
+  background-color: white;
 }

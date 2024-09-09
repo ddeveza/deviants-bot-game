@@ -22,7 +22,7 @@ const Deviants = () => {
         <div className="relative size-full flex items-center justify-center w-full z-[1]">
           <DeviantsCarousel />
         </div>
-        <div className="absolute w-full bottom-[5rem] left-0 flex justify-between z-[2]">
+        <div className="absolute w-full bottom-[6rem] left-0 flex justify-between z-[11]">
           <UpgradeModal>
             <UpgradeButton />
           </UpgradeModal>

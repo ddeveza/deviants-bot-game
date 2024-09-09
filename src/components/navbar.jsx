@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className="w-full bg-white absolute bottom-0 left-0 z-[20]"
+      className="w-full bg-white absolute bottom-0 left-0 z-[10] pb-3"
       style={{
         WebkitBoxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",
         MozBoxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",
@@ -29,11 +29,11 @@ export const Navbar = () => {
         </Link>
         <Link
           className="p-2"
-          to={PAGES.tasks}
+          to={PAGES.shop}
         >
-          <TaskSVG
+          <ShopSVG
             className={"h-10 w-10"}
-            isActive={pathname === PAGES.tasks}
+            isActive={pathname === PAGES.shop}
           />
         </Link>
         <Link
@@ -49,11 +49,11 @@ export const Navbar = () => {
         </Link>
         <Link
           className="p-2"
-          to={PAGES.shop}
+          to={PAGES.tasks}
         >
-          <ShopSVG
+          <TaskSVG
             className={"h-10 w-10"}
-            isActive={pathname === PAGES.shop}
+            isActive={pathname === PAGES.tasks}
           />
         </Link>
         <Link
