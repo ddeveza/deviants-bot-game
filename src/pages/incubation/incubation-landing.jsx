@@ -27,10 +27,10 @@ const IncubationLanding = () => {
 
      <img src={incubatorImg} alt='incubator'/> 
      <button
-        className="rounded-[20px] py-2.5 px-8 text-[161313] bg-white font-extrabold uppercase"
+        className="rounded-[20px] py-2.5 px-8 text-[161313] bg-white font-normal leading-5 font-bowlby  proportional-nums -tracking-[0.8px]"
         onClick={handlePlay}
       >
-        Play Game
+        Continue
       </button>
     </div>
   );
