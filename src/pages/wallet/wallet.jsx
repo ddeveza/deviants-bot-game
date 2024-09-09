@@ -20,7 +20,7 @@ const Wallet = () => {
         </div>
       </div>
       <div className="flex flex-col items-center space-y-6">
-        <p className="text-white text-sm text-center max-w-[200px]">To secure your Shards, connect your following accounts:</p>
+        <p className="text-white text-[0.938 rem] text-center leading-normal -tracking-[0.6px] max-w-[240px] font-chakra ">To secure your Shards, connect your following accounts:</p>
         <div className="flex flex-col space-y-5 w-[90%]">
           <Link to={PAGES.walletTon}>
             <Button className="w-full text-[#281E1E] bg-[#F1F1F1] px-20 py-7 rounded-2xl border-b-4 border-[#9B9B9B] font-bowlby text-2xl hover:text-white">Ton wallet</Button>
