@@ -26,7 +26,7 @@ export const DeviantStat = ({ attribute, value, isEvolve = false, currentLvl = 1
       ) : (
         <p className="absolute right-4 -top-4 text-xs font-bold uppercase">
           <span className="text-xs font-bold uppercase font-ibm leading-[100%] tracking-[1.2px]"> LVL {currentLvl} </span>/{" "}
-          <span className="proportional-nums font-bowlby text-3xl  font-normal leading-normal -tracking-[.5px]">{formatNumber(value)}</span>
+          <span className="lining-nums proportional-nums font-bowlby text-3xl  font-normal leading-normal -tracking-[.5px]">{formatNumber(value)}</span>
         </p>
       )}
     </div>

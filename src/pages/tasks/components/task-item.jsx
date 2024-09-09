@@ -25,7 +25,7 @@ export const TaskItem = ({ tasks, reward, status, progress, goal }) => {
             <span>
               <ShardSVG />
             </span>
-            {reward}
+            <span className="proportional-nums lining-nums font-bowlbyregular text-sm leading-5 -tracking-[0.84]">{reward}</span>
           </p>
         </div>
       </div>

@@ -29,7 +29,7 @@ export const StatsContainer = () => {
             <div className="flex justify-between">
               <div className="flex items-center space-x-0.5">
                 <BubbleSVG />
-                <p className="text-sm font-normal leading-5 proportional-nums">Deviant Type</p>
+                <p className="text-sm font-normal leading-5 proportional-nums lining-nums">Deviant Type</p>
               </div>
               <p className="text-[#161313] text-2xl -tracking-[0.5px]">angel</p>
             </div>

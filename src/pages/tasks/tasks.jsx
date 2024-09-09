@@ -12,7 +12,7 @@ const Tasks = () => {
 
       <div className="px-3 mt-10 flex flex-col space-y-5 z-[1] border">
         <div className="flex flex-col space-y-1">
-          <p className="uppercase font-extrabold text-3xl flex gap-1 items-center text-white">
+          <p className="uppercase proportional-nums lining-nums font-bowlby text-4xl leading-8 -tracking-[0.5px] flex gap-1 items-center text-white">
             <TrophySVG />
             Tasks
           </p>
@@ -25,7 +25,7 @@ const Tasks = () => {
           }}
         >
           <div className="flex flex-col space-y-3 bg-white h-full w-full p-4 rounded-xl">
-            <p className="text-[#281E1E] text-xl font-extrabold">7 Tasks Available</p>
+            <p className="text-[#281E1E] text-xl font-bowlbyregular leading-[100%]">7 Tasks Available</p>
             <Progress
               value={33}
               className="h-2 bg-[#E6E6E6] w-full"
