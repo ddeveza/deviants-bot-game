@@ -31,7 +31,7 @@ export const LoreOne = () => {
         <div className="absolute top-0 left-0">
           <TopLeftCornerSVG color={"white"} />
         </div>
-        <p className="text-white text-xs">
+        <p className="text-white text-xs font">
           Five outer dimensional home worlds lie in ruin. Those brave enough to enter the ancient gateways were transported to the last bastion of hope: <br />
           <b>Astra Nova</b>
         </p>

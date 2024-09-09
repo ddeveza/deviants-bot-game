@@ -9,7 +9,7 @@ const NewDeviant = () => {
   };
   return (
     <div className="z-10 relative flex flex-col justify-center items-center  w-full">
-      <div className="absolute py-12 top-0 left-0 w-full text-white text-center font-['Chakra_Petch'] text-3xl font-bold leading-none uppercase ">
+      <div className="absolute py-12 top-0 left-0 w-full text-white text-center font-chakra text-3xl font-bold leading-none uppercase ">
         <div>Meet the</div>
         <div>Angel Deviant</div>
       </div>

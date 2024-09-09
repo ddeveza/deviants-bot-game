@@ -25,13 +25,13 @@ export const StatsContainer = () => {
 
 
           {/* Deviant Stats */}
-          <div className="relative flex flex-col justify-between w-full bg-white rounded-xl py-2 px-3 uppercase font-bowlbyregular">
+          <div className="relative flex flex-col justify-between w-full bg-white rounded-xl py-2 px-3 uppercase font-bowlbyregular space-y-1.5">
             <div className="flex justify-between">
               <div className="flex items-center space-x-0.5">
                 <BubbleSVG />
-                <p className="text-sm">Deviant Type</p>
+                <p className="text-sm font-normal leading-5 proportional-nums">Deviant Type</p>
               </div>
-              <p className="text-[#161313] text-sm">angel</p>
+              <p className="text-[#161313] text-2xl -tracking-[0.5px]">angel</p>
             </div>
             <div className="flex justify-between">
               <p className="text-xs">Deviant Level</p>

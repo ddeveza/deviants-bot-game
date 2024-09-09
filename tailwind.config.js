@@ -15,7 +15,8 @@ export default {
 			fontFamily: {
 				bowlby: ["Bowlby One SC", 'sans-serif'],
 				bowlbyregular: ["Bowlby One", 'sans-serif'],
-				chakra: ["Chakra Petch", 'sans-serif']
+				chakra: ["Chakra Petch", 'sans-serif'],
+				inter:["Inter" , 'sans-serif']
 			},
 			textStrokeWidth: {
 				'1': '1px',

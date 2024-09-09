@@ -1,6 +1,6 @@
 import { incubatorOne } from "../assets";
 
-export const OnboardingOne = () => {
+export const  OnboardingOne = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full relative overflow-hidden space-y-10">
       <div className="absolute top-0 left-0 w-full px-12 py-8">
@@ -16,7 +16,7 @@ export const OnboardingOne = () => {
       <p className="font-bowlby text-4xl tracking-[-6px] leading-8 absolute text-white left-[70%] top-[40%]">-1s</p> */}
 
       <div
-        className="absolute w-full bottom-0 left-0 flex flex-col items-center justify-center gap-2 font-bowlby text-white py-8 ">
+        className="absolute w-full bottom-0 left-0 flex flex-col items-center justify-center gap-2 font-bowlby text-white py-8 leading-5 font-normal -tracking-[0.5px]">
         <div className="relative px-8 py-4 bg-white bg-opacity-50 rounded-xl flex flex-col items-center justify-center gap-1" >
 
           <p className="uppercase text-xl leading-5 tracking-[-0.5px]">incubation time</p>

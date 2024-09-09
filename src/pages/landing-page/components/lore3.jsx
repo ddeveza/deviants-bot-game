@@ -2,8 +2,8 @@ import { pillar } from "../assets";
 
 export const LoreThree = () => {
   return (
-    <div className="flex justify-center w-full h-full relative overflow-hidden px-4">
-      <p className="text-base uppercase text-right text-white mt-20 leading-[100%] font-['Chakra_Petch']">
+    <div className="flex justify-center w-full h-full relative overflow-hidden ">
+      <p className="px-[32px] text-base uppercase text-right text-white mt-20 leading-[100%] font-chakra font-normal">
         The Weavers of Space-Time, beings of pure energy, opened the ancient portals to Astra Nova, a hidden haven for the people of The Five Worlds as theirplanets were destroyed by an all-consuming
         entity of entropy and chaos...
       </p>

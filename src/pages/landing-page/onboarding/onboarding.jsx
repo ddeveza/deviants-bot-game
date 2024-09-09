@@ -18,7 +18,7 @@ const Onboarding = () => {
       component = <OnboardingOne />;
       break;
   }
-
+ 
   const handleOnboard = () => {
     setOnboard((prev) => prev + 1);
   };
@@ -34,9 +34,9 @@ const Onboarding = () => {
       className="relative size-full"
     >
       <div className="absolute inset-0 bg-black opacity-50" />
-      <div className="flex relative size-full z-10">{onboard <= 2 ? component : <NewDeviant />}</div>
+      <div className="flex relative size-full z-10 font-inter text-xs">{onboard <= 2 ? component : <NewDeviant />}</div>
     </div>
   );
-};
+}; 
 
 export default Onboarding;
