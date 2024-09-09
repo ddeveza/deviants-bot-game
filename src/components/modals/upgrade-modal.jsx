@@ -107,7 +107,7 @@ export const UpgradeModal = ({ children }) => {
         </div>
         <div className="flex m-auto translate-y-20">
           <DialogClose asChild>
-            <Button className="rounded-full px-7 bg-white text-black font-extrabold uppercase m-auto">Close</Button>
+            <Button className="rounded-full px-7 bg-white text-black font-bowlby uppercase m-auto">Close</Button>
           </DialogClose>
         </div>
       </div>

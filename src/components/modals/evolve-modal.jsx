@@ -82,7 +82,7 @@ export const EvolveModal = ({ children }) => {
               isEvolve={true}
             />
             <DeviantStat
-              attribute={"max energy"}
+              attribute={"new max energy"}
               value={1000}
               isEvolve={true}
             />

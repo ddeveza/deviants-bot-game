@@ -16,7 +16,8 @@ export default {
 				bowlby: ["Bowlby One SC", 'sans-serif'],
 				bowlbyregular: ["Bowlby One", 'sans-serif'],
 				chakra: ["Chakra Petch", 'sans-serif'],
-				inter:["Inter" , 'sans-serif']
+				inter:["Inter" , 'sans-serif'],
+				ibm:["IBM Plex Sans", "sans-serif"]
 			},
 			textStrokeWidth: {
 				'1': '1px',

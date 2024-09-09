@@ -17,13 +17,13 @@ export const StatUpgrade = ({ attribute, icon, currentLvl, xp, iconColor, isFull
       >
         {icon}
       </div>
-      <div className="flex flex-col">
-        <p className={cn("uppercase text-[8px] font-bold", isFullUpgrade ? "text-white" : "text-black")}>{`upgrade ${attribute}`}</p>
+      <div className="flex flex-col space-y-1">
+        <p className={cn("uppercase text-[8px] font-ibm leading-[8px] -tracking-[0.32px] font-bold proportional-nums", isFullUpgrade ? "text-white" : "text-black")}>{`upgrade ${attribute}`}</p>
         <p className={cn("uppercase text-[8px] font-bold", isFullUpgrade ? "text-white" : "text-black")}>
           {`LVL ${currentLvl} `}
           <span className={cn(isFullUpgrade ? "text-[#FAFF00]" : "text-[#00AF9A]")}>&gt; {`LVL ${upgradeLevel}`}</span>
         </p>
-        <p className={cn("uppercase text-[8px] font-extrabold", isFullUpgrade ? "text-white" : "text-black")}>{`${xp} ${isFullUpgrade ? "TON" : "XP"}`}</p>
+        <p className={cn("uppercase text-[8px] proportional-nums font-bowlbyregular font-normal leading-[8px] -tracking-[0.48px]", isFullUpgrade ? "text-white" : "text-black")}>{`${xp} ${isFullUpgrade ? "TON" : "XP"}`}</p>
       </div>
     </div>
   );
