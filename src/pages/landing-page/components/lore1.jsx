@@ -1,31 +1,31 @@
 import { BottomRightCornerSVG, TopLeftCornerSVG } from "@/assets";
-import { AsteroidOne, AsteroidThree, AsteroidTwo, planets } from "../assets";
+import { Asteroid, planets } from "../assets";
 
 export const LoreOne = () => {
   return (
     <div className="w-full relative">
       <img
-        src={AsteroidOne}
-        className="absolute right-0 top-1/4"
+        src={Asteroid}
+        className="absolute right-[-10%] rotate-[90deg] top-1/5 w-1/3"
         alt="Asteroid 1"
       />
       <img
-        src={AsteroidTwo}
-        className="absolute top-[60%] left-0"
+        src={Asteroid}
+        className="absolute top-[60%] left-[-20%] w-1/2"
         alt="Asteroid 2"
       />
       <img
-        src={AsteroidThree}
-        className="absolute bottom-0 right-0"
+        src={Asteroid}
+        className="absolute rotate-[110deg] bottom-[-10%] right-[-10%] w-2/3"
         alt="Asteroid 3"
       />
       <img
         src={planets}
-        className="absolute left-1/2 -translate-x-1/2 top-[40%]"
+        className="absolute w-2/3 left-1/2 -translate-x-1/2 top-[40%]"
         alt="Planets"
       />
       <div
-        className="p-3 max-w-[254px] absolute top-[35%] ml-6"
+        className="p-3 max-w-[254px] absolute top-[25%] ml-6"
         style={{ background: "rgba(184, 184, 184, 0.30)" }}
       >
         <div className="absolute top-0 left-0">

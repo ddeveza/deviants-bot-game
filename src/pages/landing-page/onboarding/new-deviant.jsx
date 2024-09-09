@@ -8,8 +8,8 @@ const NewDeviant = () => {
     navigate(PAGES.deviants);
   };
   return (
-    <div className="z-10 flex flex-col justify-between items-center my-20 w-full">
-      <div className="text-white text-center font-chakra text-3xl font-bold leading-none uppercase ">
+    <div className="z-10 relative flex flex-col justify-center items-center  w-full">
+      <div className="absolute py-12 top-0 left-0 w-full text-white text-center font-['Chakra_Petch'] text-3xl font-bold leading-none uppercase ">
         <div>Meet the</div>
         <div>Angel Deviant</div>
       </div>
@@ -19,9 +19,9 @@ const NewDeviant = () => {
           alt="fly-angel"
         />
       </div>
-      <div>
+      <div className="absolute bottom-0 left-0 flex justify-center w-full py-12">
         <button
-          className="rounded-[20px] py-2.5 px-8 text-[161313] bg-white font-extrabold uppercase"
+          className="rounded-[20px] py-2.5 px-8 text-[161313] bg-white font-bowlby uppercase"
           onClick={handleContinue}
         >
           Continue

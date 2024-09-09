@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import { PAGES } from "./constant/pages";
+import './App.css'
 
 //PAGES
 import Deviants from "./pages/deviants/deviants";
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
   {
     path: PAGES.deviants,
     element: (
-      <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col size-full">
         <Deviants />
         <Navbar />
       </div>
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
   {
     path: PAGES.incubation,
     element: (
-      <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col size-full">
         <Incubation />
         <Navbar />
       </div>
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
   {
     path: PAGES.tasks,
     element: (
-      <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col size-full">
         <Tasks />
         <Navbar />
       </div>
@@ -63,7 +64,7 @@ const router = createBrowserRouter([
   {
     path: PAGES.wallet,
     element: (
-      <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col size-full">
         <Wallet />
         <Navbar />
       </div>
@@ -72,7 +73,7 @@ const router = createBrowserRouter([
   {
     path: PAGES.walletTon,
     element: (
-      <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col size-full">
         <WalletTon />
         <Navbar />
       </div>
@@ -81,7 +82,7 @@ const router = createBrowserRouter([
   {
     path: PAGES.walletTwitter,
     element: (
-      <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col size-full">
         <WalletTwitter />
         <Navbar />
       </div>
@@ -90,7 +91,7 @@ const router = createBrowserRouter([
   {
     path: PAGES.pvp,
     element: (
-      <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col size-full">
         <PVP />
         <Navbar />
       </div>
@@ -99,7 +100,7 @@ const router = createBrowserRouter([
   {
     path: PAGES.shop,
     element: (
-      <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col size-full">
         <Shop />
         <Navbar />
       </div>

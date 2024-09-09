@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className="w-full bg-white relative"
+      className="w-full bg-white absolute bottom-0 left-0 z-[20]"
       style={{
         WebkitBoxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",
         MozBoxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",

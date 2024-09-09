@@ -9,23 +9,29 @@ import { UpgradeButton } from "@/components/upgrade-button";
 const Deviants = () => {
   return (
     <div
-      style={{ background: `center no-repeat url(${CloudSVG})`, backgroundColor: "#00CEB5", backgroundSize: "cover" }}
-      className="flex flex-col w-full justify-between flex-1 h-full"
+      style={{ backgroundColor: '#00CEB5'}}
+      className="relative flex flex-col w-full justify-between  h-full"
     >
-      <div className=" flex items-center justify-center">
-        <StatsContainer />
+      <div className="absolute size-full top-0 left-0 z-[0]">
+        <CloudSVG className="size-full relative"/>
       </div>
-      <div className="flex items-center justify-center w-full ">
-        <DeviantsCarousel />
+      <div className="relative size-full z-[1]">
+        <div className="absolute top-0 left-0 w-full flex items-center justify-center z-[2] ">
+          <StatsContainer />
+        </div>
+        <div className="relative size-full flex items-center justify-center w-full z-[1]">
+          <DeviantsCarousel />
+        </div>
+        <div className="absolute w-full bottom-[5rem] left-0 flex justify-between z-[2]">
+          <UpgradeModal>
+            <UpgradeButton />
+          </UpgradeModal>
+          <StatModal>
+            <StatsButton />
+          </StatModal>
+        </div>
       </div>
-      <div className="flex justify-between z-20 pb-10">
-        <UpgradeModal>
-          <UpgradeButton />
-        </UpgradeModal>
-        <StatModal>
-          <StatsButton />
-        </StatModal>
-      </div>
+
     </div>
   );
 };

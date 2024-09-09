@@ -54,7 +54,7 @@ const Incubation = () => {
         </div>
         <div className="flex items-center justify-center w-full h-full">{carousel}</div>
 
-        <div className="flex justify-between z-10  pb-10">
+        <div className="absolute bottom-[4rem] left-0 w-full flex justify-between z-10  pb-10">
           {!isEmpty && (
             <>
               <IncubatorsModal>
@@ -67,7 +67,7 @@ const Incubation = () => {
           )}
         </div>
       </div>
-      <div className="absolute flex items-center justify-center w-full -bottom-14">{!isEmpty && <EnergyBar percentage={100} />}</div>
+      <div className="absolute flex items-center justify-center w-full bottom-[-1rem]">{!isEmpty && <EnergyBar percentage={100} />}</div>
     </div>
   );
 };

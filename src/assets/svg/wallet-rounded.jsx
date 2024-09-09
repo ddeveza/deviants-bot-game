@@ -7,7 +7,7 @@ export const WalletRoundedIcon = ({ connected }) => {
       viewBox="0 0 32 32"
       fill="none"
     >
-      <g clip-path="url(#clip0_799_582)">
+      <g clipPath="url(#clip0_799_582)">
         <path
           d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16343 24.8366 0 16 0C7.16343 0 0 7.16343 0 16C0 24.8366 7.16343 32 16 32Z"
           fill={connected ? "#0098EA" : "black"}

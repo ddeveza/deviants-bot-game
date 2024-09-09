@@ -16,7 +16,7 @@ import PvpLogo from "./images/PvP-Logo.png";
 import { EnergySVG, HpSVG, PowerSVG, RestoreSVG } from "./svg/attributes-svg";
 import { BubbleSVG } from "./svg/bubble-svg";
 import { CarouselLeft, CarouselRight, ShopButton } from "./svg/button-svg";
-import CloudSVG from "./svg/cloud.svg";
+import { CloudSVG } from "./svg/CloudSVG";
 import { BottomRightCornerSVG, TopLeftCornerSVG } from "./svg/corner-svg";
 import incubatorsUpgradeSVG from "./svg/Deviants Sm_Red.svg";
 import LightCloudSVG from "./svg/light-cloud.svg";

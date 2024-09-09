@@ -78,10 +78,10 @@ export const ShardSVG = ({ className='h-5 w-5' }) => {
           y2="2.79822"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#56B7CC" />
+          <stop stopColor="#56B7CC" />
           <stop
             offset="1"
-            stop-color="#E585BE"
+            stopColor="#E585BE"
           />
         </linearGradient>
         <linearGradient
@@ -92,10 +92,10 @@ export const ShardSVG = ({ className='h-5 w-5' }) => {
           y2="10.9265"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#56B7CC" />
+          <stop stopColor="#56B7CC" />
           <stop
             offset="1"
-            stop-color="#E585BE"
+            stopColor="#E585BE"
           />
         </linearGradient>
         <linearGradient
@@ -106,10 +106,10 @@ export const ShardSVG = ({ className='h-5 w-5' }) => {
           y2="3.79492"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#56B7CC" />
+          <stop stopColor="#56B7CC" />
           <stop
             offset="1"
-            stop-color="#E585BE"
+            stopColor="#E585BE"
           />
         </linearGradient>
       </defs>

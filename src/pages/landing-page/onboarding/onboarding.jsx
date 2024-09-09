@@ -31,9 +31,10 @@ const Onboarding = () => {
         backgroundPosition: "0 90%",
       }}
       onClick={handleOnboard}
+      className="relative size-full"
     >
       <div className="absolute inset-0 bg-black opacity-50" />
-      <div className="flex min-h-screen w-full z-10">{onboard <= 2 ? component : <NewDeviant />}</div>
+      <div className="flex relative min-h-screen w-full z-10">{onboard <= 2 ? component : <NewDeviant />}</div>
     </div>
   );
 };

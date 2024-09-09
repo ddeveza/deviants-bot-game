@@ -39,13 +39,14 @@ const Lore = () => {
     <div
       style={{
         background: `center no-repeat url(${galaxyBG})`,
-        backgroundSize: "100% 145%",
-        backgroundPosition: "0 90%",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
       onClick={handleLore}
+      className="relative size-full"
     >
       <div className="absolute inset-0 bg-black opacity-50" />
-      <div className="flex min-h-screen w-full z-10">{component}</div>
+      <div className="flex relative h-full w-full z-10">{component}</div>
     </div>
   );
 };

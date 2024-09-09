@@ -1,17 +1,20 @@
 import { BottomRightCornerSVG, TopLeftCornerSVG } from "@/assets";
-import { triangleOne } from "../assets";
+import { incubatorOne } from "../assets";
 
 export const LoreFour = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full relative overflow-hidden space-y-10">
-      <p className="font-chakra text-3xl max-w-[320px] uppercase text-center text-white font-bold leading-[100%]">but they weren’t the first ones there...</p>
+    <div className="flex flex-col justify-center items-center w-full relative overflow-hidden space-y-10 px-4">
+      <div className="absolute top-0 left-0 w-full px-12 py-8">
+        <p className="font-chakra text-2xl uppercase text-center text-white font-bold leading-[100%]">{`but they weren't the first ones there...`}</p>
+
+      </div>
 
       <img
-        src={triangleOne}
-        className="w-full"
+        src={incubatorOne}
+        className="relative w-full object-contain object-center aspect-[1] shrink-0 grow-0"
       />
 
-      <div className="flex flex-col items-center justify-between gap-4">
+      <div className="absolute w-full bottom-0 left-0 py-10 flex flex-col items-center justify-between gap-4">
         <div
           className="relative py-2 px-4 w-max"
           style={{ background: "rgba(184, 184, 184, 0.30)" }}

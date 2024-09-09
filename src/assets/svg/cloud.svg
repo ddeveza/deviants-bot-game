@@ -3,7 +3,7 @@
       width="390"
       height="814"
       viewBox="0 0 390 814"
-      fill="none"
+      fill="#00CEB5"
     >
       <g filter="url(#filter0_f_488_887)">
         <path
@@ -19,10 +19,10 @@
           width="563.096"
           height="891.527"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood
-            flood-opacity="0"
+            floodOpacity="0"
             result="BackgroundImageFix"
           />
           <feBlend
