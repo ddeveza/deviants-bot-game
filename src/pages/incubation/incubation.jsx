@@ -69,7 +69,7 @@ const Incubation = () => {
           )}
         </div>
 
-        <div className="absolute flex items-center justify-center w-full bottom-[-1rem]">{!isEmpty && <EnergyBar percentage={100} />}</div>
+        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-[40%]">{!isEmpty && <EnergyBar className="size-full relative" />}</div>
       </div>
     </div>
   );
