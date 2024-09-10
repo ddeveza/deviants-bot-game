@@ -28,7 +28,7 @@ export const IncubationCarousel = ({ page, setPage }) => {
         </div>
       </div>
 
-      <div className="relative  aspect-square shrink-0 grow-0 z-[1] pt-[2rem]">
+      <div className="relative tap-area w-[70%] aspect-square shrink-0 grow-0 z-[1] pt-[2rem]">
         <img
           src={incubatorImg}
           alt="Deviant"

@@ -55,7 +55,7 @@ const Incubation = () => {
             isIncubation={true}
           />
         </div>
-        <div className="relative size-full flex items-center justify-center w-full z-[1]">{carousel}</div>
+        <div className="relative size-full flex items-center justify-center w-full z-[1] ">{carousel}</div>
         <div className="absolute w-full bottom-[6rem] left-0 flex justify-between z-[11]">
           {!isEmpty && (
             <>
