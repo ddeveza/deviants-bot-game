@@ -11,12 +11,12 @@ export const WalletContainer = ({ category, connected }) => {
       {/*SVG Filter for round corners and drop-shadow*/}
       <SvgFilter
         roundCorner="4"
-        id="rounded-filter-8"
+        id="rounded-filter-8-wallet"
         dropShadowColor="#BBBBBB"
         side={"left"}
       />
 
-      <div className="relative w-full stats-box pb-[8px] h-auto">
+      <div className="relative w-full wallet-box pb-[8px] h-auto">
         <div className="relative w-full wallet-box-inner pt-5 pb-14">
           <div className="flex items-center justify-center ">
             <div className="flex flex-col items-center">

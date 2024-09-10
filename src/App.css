@@ -89,3 +89,7 @@
   clip-path: polygon(calc(2rem) 0%, 100% 0%, 100% 100%, 2px 100%, 2px calc(100% - 6px));
   background-color: #A00600;
 }
+
+.wallet-box{
+  filter: url('#rounded-filter-8-wallet');
+}
