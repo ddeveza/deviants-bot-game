@@ -18,7 +18,7 @@ export const TaskItem = ({ tasks, reward, status, progress, goal }) => {
         <div className="flex flex-col">
           <p className="text-white text-xs capitalize">
             {tasks}
-            {progress && ` (${progress}/${goal})`}
+            {progress !== null && progress !== undefined && ` (${progress}/${goal})`}
           </p>
           <p className="flex items-center text-white text-sm">
             <span className="font-extrabold">+</span>
