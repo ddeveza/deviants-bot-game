@@ -1,11 +1,11 @@
 import { CloudSVG } from "@/assets";
 import EnergyBar from "@/assets/svg/energy-bar";
+import { StatsContainer } from "@/components/stats-container";
 import { useState } from "react";
 import { BoostButton } from "./component/incub-boost-button";
 import { IncubationCarousel } from "./component/incub-carousel";
 import { IncubationCarouselEmpty } from "./component/incub-empty-carousel";
 import IncubButtonUpgrade from "./component/incub-upgrade-button";
-import { StatsContainer } from "./component/stats-container";
 import BoostModal from "./modal/boost-modal";
 import IncubatorsModal from "./modal/incubators-modal";
 
@@ -44,17 +44,19 @@ const Incubation = () => {
   }
 
   return (
-    <div className="relative flex bg-[#00CEB5] flex-1 h-full">
-      <div
-        style={{ background: `center no-repeat url(${CloudSVG})`, backgroundSize: "cover" }}
-        className="flex flex-col h-auto w-full justify-between"
-      >
-        <div className=" flex items-center justify-center ">
-          <StatsContainer isEmpty={isEmpty} />
+    <div className="bg-[#00CEB5] relative flex flex-col size-full justify-between">
+      <div className="absolute size-full top-0 left-0 z-[0]">
+        <CloudSVG className="size-full relative" />
+      </div>
+      <div className="relative size-full z-[1]">
+        <div className="absolute top-0 left-0 w-full flex items-center justify-center z-[2] ">
+          <StatsContainer
+            isEmpty={isEmpty}
+            isIncubation={true}
+          />
         </div>
-        <div className="flex items-center justify-center w-full h-full">{carousel}</div>
-
-        <div className="absolute bottom-[4rem] left-0 w-full flex justify-between z-10  pb-10">
+        <div className="relative size-full flex items-center justify-center w-full z-[1]">{carousel}</div>
+        <div className="absolute w-full bottom-[6rem] left-0 flex justify-between z-[11]">
           {!isEmpty && (
             <>
               <IncubatorsModal>
@@ -66,8 +68,9 @@ const Incubation = () => {
             </>
           )}
         </div>
+
+        <div className="absolute flex items-center justify-center w-full bottom-[-1rem]">{!isEmpty && <EnergyBar percentage={100} />}</div>
       </div>
-      <div className="absolute flex items-center justify-center w-full bottom-[-1rem]">{!isEmpty && <EnergyBar percentage={100} />}</div>
     </div>
   );
 };

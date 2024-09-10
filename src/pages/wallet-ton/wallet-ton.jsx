@@ -17,7 +17,7 @@ const WalletTon = () => {
     >
       <div className="flex flex-col items-center w-full justify-between">
         {/* Header Container */}
-        <div className="w-[90%] mt-32 font-bowlby z-10">
+        <div className="w-full px-4 mt-32 font-bowlby z-10">
           <WalletContainer connected={connected} />
         </div>
 
@@ -29,11 +29,10 @@ const WalletTon = () => {
         </div>
 
         {/* Buttons */}
-        {/* TODO: Add "Bowlby One font not Bowlby SC" */}
         <div className="justify-center items-center w-[90%] z-10 mb-16 flex flex-col gap-4">
           {connected && (
             <Button
-              className="w-full rounded-[20px] py-6 px-8 bg-[#929292] font-bowlby text-xl text-white"
+              className="w-full rounded-[20px] py-6 px-8 bg-[#929292] font-bowlbyregular uppercase text-xl text-white"
               style={{
                 boxShadwdow: "2px 3px 0px 1px rgba(0, 0, 0, 0.20)",
                 WebkitBoxShadow: "2px 3px 0px 1px rgba(0,0,0,0.20)",
@@ -44,7 +43,7 @@ const WalletTon = () => {
           )}
 
           <Button
-            className="w-full rounded-[20px] py-6 px-8 bg-white text-[#281E1E] font-bowlby text-xl hover:text-white"
+            className="w-full rounded-[20px] py-6 px-8 bg-white text-[#281E1E] font-bowlbyregular uppercase text-xl hover:text-white"
             style={{
               boxShadwdow: "2px 3px 0px 1px rgba(0, 0, 0, 0.20)",
               WebkitBoxShadow: "2px 3px 0px 1px rgba(0,0,0,0.20)",

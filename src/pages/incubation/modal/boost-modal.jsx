@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { Modal } from "@/components/modal";
-import { BoostSVG } from "../assets/svg";
+import { BoostSVG } from "../assets";
 import { BoostItem } from "../component/incub-boost-item";
 
 const BoostModal = ({ children }) => {
@@ -12,8 +12,10 @@ const BoostModal = ({ children }) => {
       className="max-w-[360px] bg-[#BBBBBB] border-none rounded-3xl p-0 min-h-[500px] translate-y-[-60%]"
     >
       <div className="bg-white rounded-3xl h-[99%] p-4 relative">
-        <div className="flex gap-2 items-center m-auto w-max">
-          <BoostSVG />
+        <div className="flex gap-1 items-center m-auto w-max">
+          <div className="w-8 h-8">
+            <BoostSVG className="size-full relative" />
+          </div>
           <p className="text-sm uppercase font-extrabold">Boost</p>
         </div>
         <div className="flex flex-col mt-3">

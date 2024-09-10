@@ -23,10 +23,10 @@ const Wallet = () => {
         <p className="text-white text-[0.938 rem] text-center leading-normal -tracking-[0.6px] max-w-[240px] font-chakra ">To secure your Shards, connect your following accounts:</p>
         <div className="flex flex-col space-y-5 w-[90%]">
           <Link to={PAGES.walletTon}>
-            <Button className="w-full text-[#281E1E] bg-[#F1F1F1] px-20 py-7 rounded-2xl border-b-4 border-[#9B9B9B] font-bowlby text-2xl hover:text-white">Ton wallet</Button>
+            <Button className="w-full text-[#281E1E] bg-[#F1F1F1] px-20 py-7 rounded-2xl border-b-8 border-[#9B9B9B] font-bowlby text-2xl hover:text-white">Ton wallet</Button>
           </Link>
           <Link to={PAGES.walletTwitter}>
-            <Button className="w-full text-[#281E1E] bg-[#FAFAFA] px-20 py-7 rounded-2xl border-b-4 border-[#BABABA] font-bowlby text-2xl hover:text-white">Twitter / x</Button>
+            <Button className="w-full text-[#281E1E] bg-[#FAFAFA] px-20 py-7 rounded-2xl border-b-8 border-[#BABABA] font-bowlby text-2xl hover:text-white">Twitter / x</Button>
           </Link>
         </div>
       </div>

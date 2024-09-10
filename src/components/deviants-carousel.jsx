@@ -7,7 +7,7 @@ export const DeviantsCarousel = () => {
   const canEvolve = true; //NOTE: Add soon
 
   return (
-    <div className="flex flex-col items-center justify-center pt-[2rem] h-full w-full relative">
+    <div className="flex flex-col items-center justify-center pt-[2rem] size-full relative">
       <div className="absolute top-0 left-0 flex h-full justify-between items-center w-full">
         <CarouselLeft className={"relative translate-x-4"} />
 
@@ -65,7 +65,6 @@ export const DeviantsCarousel = () => {
           />
         </svg>
       </div>
-
     </div>
   );
 };

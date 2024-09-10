@@ -1,5 +1,5 @@
 import { CarouselLeft, CarouselRight } from "@/assets";
-import { EmptyIncubatorSVG, ShieldSecuritySVG } from "../assets/svg";
+import { EmptyIncubatorSVG, ShieldIncubationSVG } from "../assets";
 
 export const IncubationCarouselEmpty = ({ page, setPage }) => {
   const handleNext = () => {
@@ -13,45 +13,47 @@ export const IncubationCarouselEmpty = ({ page, setPage }) => {
     }
   };
   const style = { background: "linear-gradient(90deg, #FFD700 0%, #A78D00 28%, #C6A700 47%, #BB9E00 76.5%, #FFD700 100%)" };
+
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 w-full h-full ">
-      <div className="grid grid-cols-3 items-center  w-full ">
+    <div className="flex flex-col items-center justify-center size-full">
+      <div className="absolute top-0 left-0 flex h-full justify-between items-center w-full z-[3]">
         <div
+          className="relative translate-x-4"
           onClick={handlePrev}
-          className="flex items-center justify-center"
         >
           {page !== 1 && <CarouselLeft className=" " />}
         </div>
-        <div className="flex items-center justify-center ">
-          <EmptyIncubatorSVG />
-        </div>
         <div
+          className="relative -translate-x-4"
           onClick={handleNext}
-          className=" flex items-center justify-center"
         >
           {page !== 3 && <CarouselRight className=" " />}
         </div>
       </div>
 
+      <div className="relative shrink-0 grow-0 z-[1]">
+        <EmptyIncubatorSVG />
+      </div>
+
       {/* Carousel Navigation SVG */}
-      <div className="flex items-center justify-center w-full">
-        <div className="flex items-center px-6 py-1 rounded-3xl bg-white">
-          <ShieldSecuritySVG color="black" />
-          <span className="uppercase text-sm font-extrabold py-2">Requires Level 2</span>
+      <div className="absolute bottom-0 left-0 size-full z-[2] pb-[7rem] flex flex-col justify-end items-center gap-4">
+        <div className="flex items-center justify-center w-full">
+          <div className="flex items-center px-6 py-1 rounded-3xl bg-white">
+            <ShieldIncubationSVG color="black" />
+            <span className="uppercase text-sm font-extrabold py-2">Requires Level 2</span>
+          </div>
         </div>
-      </div>
 
-      <div className="flex items-center justify-center w-full">
-        <div
-          className="flex items-center px-6 py-1 rounded-3xl"
-          style={style}
-        >
-          <ShieldSecuritySVG color="white" />
-          <span className="uppercase text-sm font-extrabold text-white py-2">Unlock for 2 Ton</span>
+        <div className="flex items-center justify-center w-full">
+          <div
+            className="flex items-center px-6 py-1 rounded-3xl"
+            style={style}
+          >
+            <ShieldIncubationSVG color="white" />
+            <span className="uppercase text-sm font-extrabold text-white py-2">Unlock for 2 Ton</span>
+          </div>
         </div>
-      </div>
 
-      <div className="">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="88"

@@ -14,7 +14,7 @@ export const StatModal = ({ children }) => {
     >
       {/* Outer SVG (Shadow) */}
       <div className="relative">
-        <p className="text-white font-extrabold text-lg uppercase absolute -translate-x-1/2 left-1/2 -top-10">Stats</p>
+        <p className="text-white text-xl absolute -translate-x-1/2 left-1/2 -top-10 font-bowlby">Stats</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 356 439"

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
+import { PvpLogo } from "@/assets";
 import { Modal } from "@/components/modal";
 import IncubatorList from "../component/incubator-list";
-import { incubatorsUpgradeSVG } from "@/assets";
 
 const IncubatorsModal = ({ children }) => {
   return (
@@ -14,7 +14,7 @@ const IncubatorsModal = ({ children }) => {
       <div className=" bg-white rounded-3xl h-[99%] p-4 ">
         <div className="flex gap-2 items-center m-auto w-max pb-2">
           <img
-            src={incubatorsUpgradeSVG}
+            src={PvpLogo}
             alt=""
             className="h-8"
           />

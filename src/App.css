@@ -21,6 +21,11 @@
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 3rem), calc(100% - 7rem) calc(100% - 3rem), calc(100% - 10rem) 100%, 0 100%);
 }
 
+.wallet-box-inner {
+  background-color: white;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 3rem), calc(100% - 7rem) calc(100% - 3rem), calc(100% - 10rem) 100%, 0 100%);
+}
+
 .stats-box-maturity {
   width: calc(100% - 8.5rem);
 }
@@ -47,6 +52,7 @@
   background-color: #795700;
 }
 
+
 .btn-left-modal-container, .btn-right-modal-container {
   filter: url('#btn-modal-filter');
 }
@@ -60,4 +66,26 @@
 .btn-right-modal {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30px 100%, 0% calc(100% - 30px));
   background-color: white;
+}
+
+
+/* Wallet Back Button */
+
+
+.btn-back-container {
+  filter: url('#back-filter');
+}
+
+.btn-back-shadow-container {
+  filter: url('#back-filter-shadow');
+}
+
+.btn-back {
+  clip-path: polygon(2rem 0%, 100% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(90deg, #FF7C52 0%, #FF110B 100%);
+}
+
+.btn-back-shadow {
+  clip-path: polygon(calc(2rem) 0%, 100% 0%, 100% 100%, 2px 100%, 2px calc(100% - 6px));
+  background-color: #A00600;
 }

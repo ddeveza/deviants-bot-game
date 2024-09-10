@@ -12,33 +12,32 @@ export const IncubationCarousel = ({ page, setPage }) => {
     }
   };
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full">
-      <div className="flex items-center justify-between w-full h-full">
+    <div className="flex flex-col items-center justify-center size-full">
+      <div className="absolute top-0 left-0 flex h-full justify-between items-center w-full z-[3]">
         <div
+          className="relative translate-x-4"
           onClick={handlePrev}
-          className="absolute left-6"
         >
           <CarouselLeft />
         </div>
-
-        <div className="w-full">
-          <img
-            src={incubatorImg}
-            alt="incubator"
-            className="w-full"
-          />
-        </div>
-
         <div
+          className="relative -translate-x-4"
           onClick={handleNext}
-          className="absolute right-6"
         >
           <CarouselRight />
         </div>
       </div>
 
+      <div className="relative  aspect-square shrink-0 grow-0 z-[1] pt-[2rem]">
+        <img
+          src={incubatorImg}
+          alt="Deviant"
+          className="size-full object-center object-contain"
+        />
+      </div>
+
       {/* Carousel Navigation SVG */}
-      <div className="">
+      <div className="absolute bottom-0 left-0 size-full z-[2] pb-[10rem] flex flex-col justify-end items-center gap-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="88"

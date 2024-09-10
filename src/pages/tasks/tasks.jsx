@@ -10,9 +10,9 @@ const Tasks = () => {
         <LightCloudSVG className="size-full relative" />
       </div>
 
-      <div className="px-3 mt-10 flex flex-col space-y-5 z-[1] border">
-        <div className="flex flex-col space-y-1">
-          <p className="uppercase proportional-nums lining-nums font-bowlby text-4xl leading-8 -tracking-[0.5px] flex gap-1 items-center text-white">
+      <div className="px-3 mt-10 flex flex-col space-y-5 z-[1]">
+        <div className="flex flex-col space-y-2">
+          <p className="proportional-nums lining-nums font-bowlby text-4xl leading-8 -tracking-[0.5px] flex gap-2 items-center text-white">
             <TrophySVG />
             Tasks
           </p>
@@ -78,46 +78,11 @@ const Tasks = () => {
             status={"start"}
           />
           <TaskItem
-            tasks={"subscribe to deviants telegram"}
-            reward={100}
-            status={"claimed"}
-          />
-          <TaskItem
             tasks={"win 2 matches using angel"}
             reward={200}
             status={"start"}
             progress={1}
             goal={2}
-          />
-          <TaskItem
-            tasks={"win one match"}
-            reward={50}
-            status={"claim"}
-            progress={1}
-            goal={1}
-          />
-          <TaskItem
-            tasks={"incubate 1 deviant"}
-            reward={50}
-            status={"start"}
-            progress={0}
-            goal={1}
-          />
-
-          <TaskItem
-            tasks={"share battle match to telegram"}
-            reward={200}
-            status={"start"}
-          />
-          <TaskItem
-            tasks={"log in to the game"}
-            reward={50}
-            status={"claim"}
-          />
-          <TaskItem
-            tasks={"use crystals to purchase in the shop"}
-            reward={100}
-            status={"start"}
           />
         </div>
       </div>

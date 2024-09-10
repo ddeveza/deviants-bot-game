@@ -16,12 +16,12 @@ export const UpgradeModal = ({ children }) => {
           <div className="w-7 h-7">
             <UpgradeSVG className="size-full" />
           </div>
-          <p className="font-extrabold uppercase text-sm">Deviant Upgrades</p>
+          <p className="text-sm font-bowlby">Deviant Upgrades</p>
         </div>
 
         {/* Base Stats */}
         <div className="flex flex-col mt-3">
-          <p className="text-xs uppercase my-2">base stats</p>
+          <p className="text-xs uppercase my-2 font-ibmMono">base stats</p>
           <div className="grid grid-cols-2 gap-2">
             <div className="col-span-1">
               <StatUpgrade
@@ -64,7 +64,7 @@ export const UpgradeModal = ({ children }) => {
 
         {/* Full Upgrade */}
         <div className="flex flex-col mt-3">
-          <p className="text-xs uppercase my-2">full upgrade</p>
+          <p className="text-xs uppercase my-2 font-ibmMono">full upgrade</p>
           <div className="grid grid-cols-2 gap-2">
             <div className="col-span-1">
               <StatUpgrade
@@ -107,7 +107,7 @@ export const UpgradeModal = ({ children }) => {
         </div>
         <div className="flex m-auto translate-y-20">
           <DialogClose asChild>
-            <Button className="rounded-full px-7 bg-white text-black font-bowlby uppercase m-auto">Close</Button>
+            <Button className="rounded-full px-7 bg-white text-black font-bowlby m-auto">Close</Button>
           </DialogClose>
         </div>
       </div>
