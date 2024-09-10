@@ -31,14 +31,14 @@ const BoostModal = ({ children }) => {
             <div className="col-span-1">
               <BoostItem
                 isPremium={false}
-                title={"Efficiency Enhancer"}
+                title={"Full Energy"}
                 shardsValue={200}
               />
             </div>
             <div className="col-span-1">
               <BoostItem
                 isPremium={false}
-                title={"Efficiency Enhancer"}
+                title={"Time Warp"}
                 shardsValue={1000}
               />
             </div>

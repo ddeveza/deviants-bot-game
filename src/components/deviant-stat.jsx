@@ -14,13 +14,13 @@ export const DeviantStat = ({ attribute, value, isEvolve = false, currentLvl = 1
       <p className="text-xs font-bold uppercase font-ibmMono leading-[100%] tracking-[1.2px]">{attribute}</p>
 
       {isEvolve ? (
-        <p className="text-3xl font-extrabold absolute right-4 -top-3.5">
+        <p className="absolute right-4 -top-3.5">
           {isShard ? (
             <span className="flex items-center gap-1">
-              <ShardSVG className="w-7 h-7" /> {formatNumber(value)}
+              <ShardSVG className="w-7 h-7" /><span className="lining-nums proportional-nums font-bowlby text-3xl  font-normal -tracking-[.5px]"> {formatNumber(value)}</span>
             </span>
           ) : (
-            formatNumber(value)
+            <span className="lining-nums proportional-nums font-bowlby text-3xl  font-normal -tracking-[.5px]"> {formatNumber(value)}</span>
           )}
         </p>
       ) : (
