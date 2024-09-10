@@ -5,12 +5,12 @@ import { TaskItem } from "./components/task-item";
 
 const Tasks = () => {
   return (
-    <div className="bg-[#20506E] flex flex-col justify-between size-full">
+    <div className="bg-[#20506E] flex flex-col justify-between size-full   overflow-scroll">
       <div className="absolute size-full top-0 left-0 z-[0]">
         <LightCloudSVG className="size-full relative" />
       </div>
 
-      <div className="px-3 mt-10 flex flex-col space-y-5 z-[1]">
+      <div className="px-3 mt-10 flex flex-col space-y-5 z-[1] ">
         <div className="flex flex-col space-y-2">
           <p className="proportional-nums lining-nums font-bowlby text-4xl leading-8 -tracking-[0.5px] flex gap-2 items-center text-white">
             <TrophySVG />
@@ -34,7 +34,7 @@ const Tasks = () => {
           </div>
         </div>
 
-        <div className="flex flex-col space-y-3 max-h-[500px] overflow-hidden overflow-y-scroll">
+        <div className="flex flex-col space-y-3 pb-10 max-h-[500px] overflow-y-scroll">
           <TaskItem
             tasks={"subscribe to deviants telegram"}
             reward={100}

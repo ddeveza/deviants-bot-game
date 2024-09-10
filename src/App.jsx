@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
 import { Navbar } from "./components/navbar";
 import { PAGES } from "./constant/pages";
-import './App.css'
 
 //PAGES
 import Deviants from "./pages/deviants/deviants";
