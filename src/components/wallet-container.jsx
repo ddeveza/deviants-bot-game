@@ -13,6 +13,7 @@ export const WalletContainer = ({ category, connected }) => {
         roundCorner="4"
         id="rounded-filter-8"
         dropShadowColor="#BBBBBB"
+        side={"left"}
       />
 
       <div className="relative w-full stats-box pb-[8px] h-auto">
