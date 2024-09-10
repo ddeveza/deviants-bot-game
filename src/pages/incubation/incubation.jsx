@@ -1,5 +1,4 @@
 import { CloudSVG } from "@/assets";
-import EnergyBar from "@/assets/svg/energy-bar";
 import { StatsContainer } from "@/components/stats-container";
 import { useState } from "react";
 import { BoostButton } from "./component/incub-boost-button";
@@ -68,8 +67,6 @@ const Incubation = () => {
             </>
           )}
         </div>
-
-        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-[40%]">{!isEmpty && <EnergyBar className="size-full relative" />}</div>
       </div>
     </div>
   );
