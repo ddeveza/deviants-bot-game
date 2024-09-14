@@ -8,11 +8,7 @@ export const DeviantsCarousel = () => {
 
   return (
     <div className="flex flex-col items-center justify-center pt-[2rem] size-full relative">
-      <div className="absolute top-0 left-0 flex h-full justify-between items-center w-full">
-        <CarouselLeft className={"relative translate-x-4"} />
-
-        <CarouselRight className={"relative -translate-x-4"} />
-      </div>
+      
 
       <div className="relative tap-area w-full aspect-square shrink-0 grow-0 z-[1] pb-[2rem]">
         <img
@@ -24,7 +20,7 @@ export const DeviantsCarousel = () => {
 
       {/* Carousel Navigation SVG */}
       <div className="absolute bottom-0 left-0 size-full z-[2] pb-[9rem] flex flex-col justify-end items-center gap-4">
-        <EvolveModal>
+        <EvolveModal >
           <Button
             disabled={!canEvolve}
             className={cn("flex gap-2 bg-white text-black rounded-full relative px-8  font-bowlbyregular uppercase ", !canEvolve && "opacity-50")}

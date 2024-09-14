@@ -20,13 +20,13 @@ export const TaskItem = ({ tasks, reward, status, progress, goal }) => {
             {tasks}
             {progress !== null && progress !== undefined && ` (${progress}/${goal})`}
           </p>
-          <p className="flex items-center text-white text-sm">
+          <div className="flex items-center text-white text-sm">
             <span className="font-extrabold">+</span>
             <span>
               <ShardSVG />
             </span>
             <span className="proportional-nums lining-nums font-bowlbyregular text-sm leading-5 -tracking-[0.84]">{reward}</span>
-          </p>
+          </div>
         </div>
       </div>
       <div>

@@ -26,10 +26,18 @@ const SvgFilter = ({ id, dropShadowColor, roundCorner, side }) => {
             operator="atop"
           />
           {dropShadowColor &&
-            (side == "left" ? (
+            (side == "left bottom" ? (
               <feDropShadow
                 dx="-4"
                 dy="7"
+                stdDeviation="0"
+                floodOpacity="1"
+                floodColor={dropShadowColor}
+              />
+            ) : side == "left" ? (
+              <feDropShadow
+                dx="-5"
+                dy="0"
                 stdDeviation="0"
                 floodOpacity="1"
                 floodColor={dropShadowColor}

@@ -1,13 +1,14 @@
 import StatsSvg from "@/assets/svg/stats-svg";
 import SvgFilter from "./ui/svg-filter";
+import { forwardRef } from "react";
 
-export const StatsButton = () => {
+export const StatsButton = forwardRef((props, buttonRef) => {
   return (
-    <div className="relative cursor-pointer w-[7rem]">
+    <div {...props} ref={buttonRef} className="relative cursor-pointer w-[7rem]">
       <SvgFilter
         dropShadowColor="#BBBBBB"
         roundCorner="2"
-        id="btn-modal-filter"
+        id="btn-modal-filter-right"
       />
       <div className="relative btn-right-modal-container w-full h-[4rem] pb-[6px]">
         <div className="relative btn-right-modal size-full"></div>
@@ -23,4 +24,4 @@ export const StatsButton = () => {
       </div>
     </div>
   );
-};
+});

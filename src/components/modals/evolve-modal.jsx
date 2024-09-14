@@ -5,13 +5,15 @@ import { useNavigate } from "react-router-dom";
 import { DeviantStat } from "../deviant-stat";
 import { Modal } from "../modal";
 import { Button } from "../ui/button";
-import { DialogClose } from "../ui/dialog";
+import { DialogClose, DialogFooter } from "../ui/dialog";
 export const EvolveModal = ({ children }) => {
   const hasEnoughShards = true; //NOTE: Add soon
 
   const navigate = useNavigate();
   return (
     <Modal
+      title="Evolve Deviant"
+      description="Evolve a deviant to the next phase"
       triggerButton={children}
       disabledCloseButton={true}
       className={"max-w-[360px] bg-transparent border-none p-0 gap-0"}
@@ -106,7 +108,7 @@ export const EvolveModal = ({ children }) => {
           </div>
         </div>
 
-        <div className="flex m-auto mt-6">
+        <DialogFooter className="flex m-auto mt-6">
           <DialogClose asChild>
             <Button
               onClick={() => navigate(PAGES.incubationLanding)}
@@ -116,7 +118,7 @@ export const EvolveModal = ({ children }) => {
               {hasEnoughShards ? "proceed" : "Not enough shards"}
             </Button>
           </DialogClose>
-        </div>
+        </DialogFooter>
       </div>
     </Modal>
   );

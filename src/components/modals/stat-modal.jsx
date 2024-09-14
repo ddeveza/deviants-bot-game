@@ -4,17 +4,22 @@ import { DeviantStat } from "../deviant-stat";
 import { Modal } from "../modal";
 import { Button } from "../ui/button";
 import { DialogClose } from "../ui/dialog";
+import { DEVIANT } from "@/constant/constants";
+import DeviantCharacters from "../deviant-characters";
+import SvgFilter from "../ui/svg-filter";
 
 export const StatModal = ({ children }) => {
   return (
     <Modal
+      title="Deviant Stats"
+      description="Shows the stats of the deviant"
       triggerButton={children}
       disabledCloseButton={true}
       className={"max-w-[360px] bg-transparent border-none p-0 gap-0"}
     >
       {/* Outer SVG (Shadow) */}
-      <div className="relative">
-        <p className="text-white text-xl absolute -translate-x-1/2 left-1/2 -top-10 font-bowlby">Stats</p>
+      <div className="relative flex flex-col justify-center items-center">
+        <p className="text-white text-xl absolute -translate-x-1/2 left-1/2 -top-10 font-bowlby uppercase">Stats</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 356 439"
@@ -39,39 +44,16 @@ export const StatModal = ({ children }) => {
             fill="white"
           />
         </svg>
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-start items-center">
+          <SvgFilter roundCorner={2} id="clip-card-filter" />
+          <div className="w-full h-1/2 p-2 clip-card-container relative">
+            <div className="size-full clip-card-deviant" style={{ backgroundColor: DEVIANT[0].primaryColor }}>
+              <DeviantCharacters species={DEVIANT[0].species} evolutionPhase={DEVIANT[0].evolutionPhase} pose="Card" className="size-full scale-110 origin-center relative" />
 
-        <div className="absolute top-0 w-full">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 333 222"
-            fill="none"
-            className="p-2"
-          >
-            <defs>
-              <clipPath id="clipPathShape">
-                <path d="M0.25 32.1236V211.062C0.25 216.585 4.72715 221.062 10.25 221.062H294.553C297.166 221.062 299.676 220.039 301.545 218.212L329.241 191.128C331.165 189.247 332.25 186.67 332.25 183.979V10.0625C332.25 4.53965 327.773 0.0625 322.25 0.0625H32.8106C30.1971 0.0625 27.6876 1.08558 25.8191 2.91274L3.25851 24.9739C1.33453 26.8553 0.25 29.4327 0.25 32.1236Z" />
-              </clipPath>
-            </defs>
-
-            <g clipPath="url(#clipPathShape)">
-              {/* Background Rect to fill the transparent parts of the image */}
-              <rect
-                width="100%"
-                height="100%"
-                fill="#72E6DF"
-              />
-              <image
-                href={flyAngelImg}
-                x="0"
-                y="0"
-                width="100%"
-                height="100%"
-                preserveAspectRatio="xMidYMid slice"
-              />
-            </g>
-          </svg>
+            </div>
+          </div>
           {/* Deviant Stats */}
-          <div className="flex flex-col space-y-5 px-2 mt-1.5">
+          <div className="flex flex-col space-y-5 px-2 mt-1.5 w-full relative">
             <DeviantStat
               attribute={"hp"}
               value={1500}
@@ -95,7 +77,7 @@ export const StatModal = ({ children }) => {
           </div>
         </div>
 
-        <div className="flex m-auto mt-6">
+        <div className="flex m-auto mt-6 relative">
           <DialogClose asChild>
             <Button className={cn("rounded-full px-7 bg-white text-black font-extrabold uppercase m-auto")}>Close</Button>
           </DialogClose>

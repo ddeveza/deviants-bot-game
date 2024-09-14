@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export function Modal({ title, description, triggerButton, footer, children, disabledCloseButton = false, className, open, setOpen }) {
   return (
@@ -7,17 +8,13 @@ export function Modal({ title, description, triggerButton, footer, children, dis
       open={open}
       onOpenChange={setOpen}
     >
-      <DialogTrigger>{triggerButton}</DialogTrigger>
+      <DialogTrigger asChild>{triggerButton}</DialogTrigger>
       <DialogContent
         className={cn(className)}
         disabledCloseButton={disabledCloseButton}
       >
-        {title && (
-          <DialogHeader>
-            <DialogTitle>{title}</DialogTitle>
-            {description && <DialogDescription>{description}</DialogDescription>}
-          </DialogHeader>
-        )}
+        {title && <VisuallyHidden asChild><DialogTitle>{title}</DialogTitle></VisuallyHidden>}
+        {description && <VisuallyHidden asChild><DialogDescription>{description}</DialogDescription></VisuallyHidden>}
         {children}
         {footer && <DialogFooter>{footer}</DialogFooter>}
       </DialogContent>

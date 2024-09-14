@@ -21,13 +21,52 @@
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 3rem), calc(100% - 7rem) calc(100% - 3rem), calc(100% - 10rem) 100%, 0 100%);
 }
 
+.clans-box {
+  filter: url('#clans-filter');
+}
+
+.clans-box-inner {
+  background-color: #e6e6e6;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 3rem), calc(100% - 7rem) calc(100% - 3rem), calc(100% - 10rem) 100%, 0 100%);
+}
+
+.friends-box {
+  filter: url('#friends-filter');
+}
+
+.friends-box-inner {
+  background-color: #e6e6e6;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 3rem), calc(100% - 7rem) calc(100% - 3rem), calc(100% - 10rem) 100%, 0 100%);
+}
+
+.leader-box {
+  filter: url('#leader-filter');
+}
+
+.leader-box-inner {
+  background-color: #e6e6e6;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 3rem), calc(100% - 7rem) calc(100% - 3rem), calc(100% - 10rem) 100%, 0 100%);
+}
+
+
 .wallet-box-inner {
   background-color: white;
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 3rem), calc(100% - 7rem) calc(100% - 3rem), calc(100% - 10rem) 100%, 0 100%);
 }
 
+.clip-card-deviant {
+  clip-path: polygon(100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%, 0% 30px, 30px 0%)
+}
+
+.clip-card-container {
+  filter: url('#clip-card-filter');
+}
+
 .stats-box-maturity {
   width: calc(100% - 8.5rem);
+}
+.ui-container-button {
+  width: calc(100% - 9rem);
 }
 
 .deviant-maturity {
@@ -53,8 +92,34 @@
 }
 
 
-.btn-left-modal-container, .btn-right-modal-container {
-  filter: url('#btn-modal-filter');
+.btn-back-new-container {
+  filter: url('#back-new-filter');
+}
+
+.btn-back-new-shadow-container {
+  filter: url('#back-new-filter-shadow');
+}
+
+.btn-back-new {
+  clip-path: polygon(2rem 0%, 100% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(90deg, #FF7C52 0%, #FF110B 100%);
+}
+
+.btn-back-new-shadow {
+  clip-path: polygon(calc(2rem) 0%, 100% 0%, 100% 100%, 2px 100%, 2px calc(100% - 6px));
+  background-color: #CF100A;
+}
+
+
+.btn-left-modal-container {
+  filter: url('#btn-modal-filter-left');
+}
+.btn-right-modal-container {
+  filter: url('#btn-modal-filter-right');
+}
+.deviant-stat-right-container, .incubator-stat-right-container{
+    clip-path: polygon(100% 0%, 100% 100%, 50% 100%, calc(50% - 10px) calc(100% - 10px), 10px calc(100% - 10px), 0% calc(100% - 20px), 0% 10px, 30% 10px, calc(30% + 10px) 0%);
+    background-color: #bbbbbb;
 }
 
 .btn-left-modal {
@@ -62,6 +127,10 @@
   background-color: white;
 }
 
+.deviant-stat-right, .incubator-stat-right {
+  clip-path: polygon(100% 0%, 100% 100%, 50% 100%, calc(50% - 10px) calc(100% - 10px), 10px calc(100% - 10px), 0% calc(100% - 20px), 0% 10px, 30% 10px, calc(30% + 10px) 0%);
+  background-color: white;
+}
 
 .btn-right-modal {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30px 100%, 0% calc(100% - 30px));
@@ -90,6 +159,82 @@
   background-color: #A00600;
 }
 
-.wallet-box{
+.wallet-box {
   filter: url('#rounded-filter-8-wallet');
+}
+
+
+.shop-container {
+  background-color: #bbbbbb;
+  border-radius: 1rem;
+}
+
+.shop-container::before {
+  background-color: white;
+  content: '';
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 8px);
+}
+
+.btn-dev-container {
+  background-color: #bbbbbb;
+  border-radius: 1rem;
+}
+
+.btn-dev-container::before {
+  background-color: white;
+  content: '';
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 8px);
+}
+
+.btn-dev-container-red {
+  background-color: #CF100A;
+  border-radius: 1rem;
+}
+
+.btn-dev-container-red::before {
+  background: linear-gradient(90deg, #FF7C52 0%, #FF110B 100%);
+  content: '';
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 8px);
+}
+
+.btn-green-container {
+  background-color: #078874;
+  border-radius: 0.5rem;
+}
+
+.btn-green-container::before {
+  background: linear-gradient(90deg, #43C7C7 0%, #00C09E 100%);
+  content: '';
+  position: absolute;
+  border-radius: 0.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 6px);
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  /* text-shadow:
+    1px 1px 0 #fff,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff; */
 }

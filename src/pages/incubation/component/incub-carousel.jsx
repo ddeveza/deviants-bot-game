@@ -1,4 +1,5 @@
 import { CarouselLeft, CarouselRight, incubatorImg } from "@/assets";
+import Incubators from "@/components/incubators";
 
 export const IncubationCarousel = ({ page, setPage }) => {
   const handleNext = () => {
@@ -28,12 +29,8 @@ export const IncubationCarousel = ({ page, setPage }) => {
         </div>
       </div>
 
-      <div className="relative tap-area w-[70%] aspect-square shrink-0 grow-0 z-[1] pt-[2rem]">
-        <img
-          src={incubatorImg}
-          alt="Deviant"
-          className="size-full object-center object-contain"
-        />
+      <div className="relative tap-area w-[100%] aspect-square shrink-0 grow-0 z-[1] pt-[2rem]">
+        <Incubators className="size-full relative" level={0} />
       </div>
 
       {/* Carousel Navigation SVG */}

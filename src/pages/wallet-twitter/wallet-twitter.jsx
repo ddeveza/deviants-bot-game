@@ -13,7 +13,7 @@ const WalletTwitter = () => {
   return (
     <div
       className={cn("flex-1 flex h-full pb-[3rem]")}
-      style={{ background: bg, backgroundColor: connected ? "#0098EA" : "#515151", backgroundSize: "cover" }}
+      style={{ background: bg, backgroundColor: connected ? "#000000" : "#515151", backgroundSize: "cover" }}
     >
       <div className="flex flex-col items-center w-full justify-between">
         {/* Header Container */}

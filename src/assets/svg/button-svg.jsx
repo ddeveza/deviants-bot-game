@@ -19,6 +19,24 @@ export const ShopButton = () => {
   );
 };
 
+export const BackButton = () => {
+  return (
+    <div className="relative w-full cursor-pointer pb-[6px]">
+      <SvgFilter roundCorner="4" id="back-new-filter" />
+      <SvgFilter roundCorner="5" id="back-new-filter-shadow" />
+      <div className="btn-back-new-shadow-container absolute top-0 left-0 size-full">
+        <div className="btn-back-new-shadow size-full"></div>
+      </div>
+      <div className="btn-back-new-container w-[9rem] h-[2rem]">
+        <div className="btn-back-new size-full flex items-center justify-center">
+        <p className="text-white uppercase pl-4 font-bowlbyregular">Back</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
 export const CarouselLeft = ({ className }) => {
   return (
     <svg

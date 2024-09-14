@@ -6,9 +6,14 @@ export const PAGES = {
   wallet: "/wallet",
   walletTon: "/wallet-ton",
   walletTwitter: "/wallet-twitter",
+  leaderboard: "/leaderboard",
+  clans: "/clans",
+  friends: "/friends",
   tasks: "/tasks",
   onboard: "/onboard",
   deviants: "/deviants",
   incubation: "/incubation",
   incubationLanding: "/incub-landing",
 };
+
+

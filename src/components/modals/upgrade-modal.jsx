@@ -7,6 +7,8 @@ import { DialogClose } from "../ui/dialog";
 export const UpgradeModal = ({ children }) => {
   return (
     <Modal
+      title="Upgrade Deviant"
+      description="Upgrades a Deviant's stats"
       triggerButton={children}
       disabledCloseButton={true}
       className="max-w-[360px] bg-[#BBBBBB] border-none rounded-3xl sm:rounded-3xl p-0 min-h-[300px] translate-y-[-60%]"

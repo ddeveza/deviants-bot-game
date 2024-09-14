@@ -56,10 +56,10 @@ export const ShardLeftSVG = () => {
           y2="42.155"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#56B7CC" />
+          <stop stopColor="#56B7CC" />
           <stop
             offset="1"
-            stop-color="#E585BE"
+            stopColor="#E585BE"
           />
         </linearGradient>
         <linearGradient
@@ -70,10 +70,10 @@ export const ShardLeftSVG = () => {
           y2="139.769"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#56B7CC" />
+          <stop stopColor="#56B7CC" />
           <stop
             offset="1"
-            stop-color="#E585BE"
+            stopColor="#E585BE"
           />
         </linearGradient>
       </defs>
@@ -159,10 +159,10 @@ export const ShardRightSVG = () => {
           y2="180.872"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#56B7CC" />
+          <stop stopColor="#56B7CC" />
           <stop
             offset="1"
-            stop-color="#E585BE"
+            stopColor="#E585BE"
           />
         </linearGradient>
         <linearGradient
@@ -173,10 +173,10 @@ export const ShardRightSVG = () => {
           y2="101.005"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#56B7CC" />
+          <stop stopColor="#56B7CC" />
           <stop
             offset="1"
-            stop-color="#E585BE"
+            stopColor="#E585BE"
           />
         </linearGradient>
         <linearGradient
@@ -187,10 +187,10 @@ export const ShardRightSVG = () => {
           y2="197.764"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#56B7CC" />
+          <stop stopColor="#56B7CC" />
           <stop
             offset="1"
-            stop-color="#E585BE"
+            stopColor="#E585BE"
           />
         </linearGradient>
       </defs>

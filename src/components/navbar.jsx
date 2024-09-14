@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className="w-full bg-white absolute bottom-0 left-0 z-[10] pb-3"
+      className="w-full bg-white absolute bottom-0 left-0 z-[10] pb-3 h-[4.5rem]"
       style={{
         WebkitBoxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",
         MozBoxShadow: "0px -20px 60px 30px rgba(22, 19, 19, 0.35)",
@@ -19,7 +19,7 @@ export const Navbar = () => {
     >
       <div className="flex justify-around w-full h-full relative items-center ">
         <Link
-          className="p-2"
+          className="flex justify-center items-center"
           to={PAGES.deviants}
         >
           <DeviantsSVG
@@ -28,7 +28,7 @@ export const Navbar = () => {
           />
         </Link>
         <Link
-          className="p-2"
+          className="flex justify-center items-center"
           to={PAGES.shop}
         >
           <ShopSVG
@@ -38,8 +38,8 @@ export const Navbar = () => {
         </Link>
         <Link
           to={PAGES.pvp}
-          style={{ background: pvpBG, boxShadow: "0 0 0 5px white" }}
-          className="flex items-center justify-center w-16 h-16 rounded-full relative -translate-y-3 z-10"
+          style={{ background: pvpBG }}
+          className="flex items-center justify-center w-20 h-20 rounded-full relative -translate-y-3 z-10 border-8 border-white "
         >
           <img
             src={PvpLogo}
@@ -48,7 +48,7 @@ export const Navbar = () => {
           />
         </Link>
         <Link
-          className="p-2"
+          className="flex justify-center items-center"
           to={PAGES.tasks}
         >
           <TaskSVG
@@ -57,7 +57,7 @@ export const Navbar = () => {
           />
         </Link>
         <Link
-          className="p-2"
+          className="flex justify-center items-center"
           to={PAGES.wallet}
         >
           <WalletSVG

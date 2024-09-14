@@ -90,8 +90,8 @@ const Tasks = () => {
   ];
 
   return (
-    <div className="bg-[#20506E] flex flex-col justify-between size-full">
-      <div className="absolute size-full top-0 left-0 z-[0]">
+    <div className="bg-[#20506E] flex flex-col justify-between size-full ">
+      <div className="absolute size-full top-0 left-0 z-[0] ">
         <LightCloudSVG className="size-full relative" />
       </div>
 
@@ -124,10 +124,11 @@ const Tasks = () => {
           className="flex flex-col space-y-3 pb-10 overflow-y-scroll"
           style={{ maxHeight: "calc(100vh - 23rem)" }}
         >
-          {testTasks.map((task) => {
+          {testTasks.map((task ,index) => {
             const { taskName, reward, status } = task;
             return (
               <TaskItem
+                key={index}
                 tasks={taskName}
                 reward={reward}
                 status={status}

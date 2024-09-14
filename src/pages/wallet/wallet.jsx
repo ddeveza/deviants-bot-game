@@ -6,20 +6,22 @@ import { ShardLeftSVG, ShardRightSVG } from "./assets";
 const Wallet = () => {
   return (
     <div className="bg-[#110079] flex flex-col justify-between pb-[8rem] flex-1 size-full">
-      <div className="flex justify-center mt-48 relative">
+      <div className="flex  flex-col items-center justify-center mt-40 relative">
         <div className="absolute left-0 -bottom-10">
           <ShardLeftSVG />
         </div>
-        <p className="text-white text-center font-bowlby text-4xl z-10">
-          Connect
-          <br />
-          Accounts
-        </p>
         <div className="absolute right-0 -top-10">
           <ShardRightSVG />
         </div>
+
+        <p className="text-white text-center font-bowlby text-4xl relative z-10">
+          Connect
+        </p>
+        <p className="text-white text-center font-bowlby text-4xl relative z-10">
+          Accounts
+        </p>
       </div>
-      <div className="flex flex-col items-center space-y-6">
+      <div className="flex flex-col items-center space-y-6 relative z-[2]">
         <p className="text-white text-[0.938 rem] text-center leading-normal -tracking-[0.6px] max-w-[240px] font-chakra ">To secure your Shards, connect your following accounts:</p>
         <div className="flex flex-col space-y-5 w-[90%]">
           <Link to={PAGES.walletTon}>

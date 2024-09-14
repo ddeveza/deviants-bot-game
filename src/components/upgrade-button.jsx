@@ -1,10 +1,11 @@
 import { UpgradeSVG } from "@/assets";
 import SvgFilter from "./ui/svg-filter";
+import { forwardRef } from "react";
 
-export const UpgradeButton = () => {
+export const UpgradeButton = forwardRef((props, buttonRef) => {
   return (
-    <div className="relative cursor-pointer w-[7rem]">
-      <SvgFilter dropShadowColor="#BBBBBB" roundCorner="2" id="btn-modal-filter" />
+    <div {...props} ref={buttonRef} className="relative cursor-pointer w-[7rem]">
+      <SvgFilter dropShadowColor="#BBBBBB" roundCorner="2" id="btn-modal-filter-left" />
       <div className="relative btn-left-modal-container w-full h-[4rem] pb-[6px]">
         <div className="relative btn-left-modal size-full">
 
@@ -22,4 +23,4 @@ export const UpgradeButton = () => {
 
     </div>
   );
-};
+});

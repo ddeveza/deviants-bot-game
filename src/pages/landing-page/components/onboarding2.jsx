@@ -1,3 +1,4 @@
+import Incubators from "@/components/incubators";
 import { LightSVG, incubatorOne } from "../assets";
 
 export const OnboardingTwo = () => {
@@ -9,10 +10,9 @@ export const OnboardingTwo = () => {
       <p className="relative font-chakra text-3xl uppercase text-center text-white font-bold leading-[100%]">
         Incubator is ready
       </p>
-      <img
-        src={incubatorOne}
-        className="relative z-[2] w-full rotate-6 scale-110"
-      />
+      <div className="relative tap-area w-[100%] scale-110 origin-center aspect-square shrink-0 grow-0 z-[1]">
+        <Incubators className="incubator-animated size-full relative" level={0} />
+      </div>
     </div>
   );
 };

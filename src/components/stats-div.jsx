@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const StatsDiv = ({ level, progress, className, shards }) => {
     return (
-        <div className={className}>
+        <div className="relative h-[3rem] flex justify-between w-full font-bowlbyregular gap-2 bg-white rounded-xl py-2 px-4">
             <div className="w-full flex items-center gap-2 bottom-0">
                 <Avatar className="bg-gray-600 w-7 h-7">
                     <AvatarImage src={flyAngelImg} />
@@ -26,7 +26,7 @@ const StatsDiv = ({ level, progress, className, shards }) => {
                 </div>
             </div>
             <div className="flex items-center w-full justify-end">
-                <ShardSVG className="w-5 h-5" />
+                <ShardSVG className="w-5 h-5 relative" />
                 <p className=" whitespace-nowrap text-[14px]">{shards}</p>
             </div>
         </div>

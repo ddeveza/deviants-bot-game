@@ -16,6 +16,11 @@ import Tasks from "./pages/tasks/tasks";
 import WalletTon from "./pages/wallet-ton/wallet-ton";
 import WalletTwitter from "./pages/wallet-twitter/wallet-twitter";
 import Wallet from "./pages/wallet/wallet";
+import Clans from "./pages/clans/clans";
+import Leaderboard from "./pages/leaderboard/leaderboard";
+import Friends from "./pages/friends/friends";
+import WebApp from "@twa-dev/sdk";
+import { useLayoutEffect } from "react";
 
 const router = createBrowserRouter([
   {
@@ -98,6 +103,35 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: PAGES.clans,
+    element: (
+      <div className="relative flex flex-col size-full">
+        <Clans />
+        <Navbar />
+      </div>
+    ),
+  },
+
+  {
+    path: PAGES.leaderboard,
+    element: (
+      <div className="relative flex flex-col size-full">
+        <Leaderboard />
+        <Navbar />
+      </div>
+    ),
+  },
+
+  {
+    path: PAGES.friends,
+    element: (
+      <div className="relative flex flex-col size-full">
+        <Friends />
+        <Navbar />
+      </div>
+    ),
+  },
+  {
     path: PAGES.shop,
     element: (
       <div className="relative flex flex-col size-full">
@@ -107,8 +141,19 @@ const router = createBrowserRouter([
     ),
   },
 ]);
-
+WebApp.ready();
 function App() {
+  useLayoutEffect(() => {
+    if (!WebApp.isExpanded) {
+      WebApp.expand();
+    }
+    if (WebApp.isVerticalSwipesEnabled) {
+      WebApp.disableVerticalSwipes();
+    }
+    if (!WebApp.isClosingConfirmationEnabled) {
+      WebApp.enableClosingConfirmation()
+    }
+  }, [])
   return (
     <>
       <RouterProvider router={router} />

@@ -25,12 +25,11 @@ export const StatsContainer = ({ isEmpty, isIncubation }) => {
           <StatsDiv
             level={1}
             progress={33}
-            className="relative h-[3rem] flex justify-between w-full font-bowlbyregular gap-2 bg-white rounded-xl py-2 px-3"
             shards={isIncubation ? 0 : 4000}
           />
 
           {/* Deviant Stats */}
-          <div className="relative flex flex-col justify-between w-full bg-white rounded-xl py-2 px-3 uppercase font-bowlbyregular space-y-1.5">
+          <div className="relative flex flex-col justify-between w-full bg-white rounded-xl py-2 px-3 uppercase font-bowlbyregular ">
             {isEmpty ? (
               <>
                 <div className="flex flex-col justify-center items-center px-2 py-3 text-center">
@@ -41,26 +40,26 @@ export const StatsContainer = ({ isEmpty, isIncubation }) => {
             ) : (
               <>
                 <div className="flex justify-between">
-                  <div className="flex items-center space-x-0.5">
+                  <div className="flex items-center ">
                     {isIncubation ? <ClockSVG /> : <BubbleSVG />}
-                    <p className="text-sm font-normal leading-5 proportional-nums lining-nums">{isIncubation ? "Incubation time" : "Deviant Type"}</p>
+                    <p className="text-xs font-normal leading-5 proportional-nums lining-nums">{isIncubation ? "Incubation time" : "Deviant Type"}</p>
                   </div>
-                  <p className="text-[#161313] text-2xl -tracking-[0.5px]">{isIncubation ? "1:52:46" : "angel"}</p>
+                  <p className="text-[#161313] text-xl -tracking-[0.5px]">{isIncubation ? "1:52:46" : "angel"}</p>
                 </div>
                 <div className="flex justify-between">
-                  <div className="flex items-center space-x-0.5">
+                  <div className="flex items-center ">
                     {isIncubation && <TapSVG />}
-                    <p className="text-xs">{isIncubation ? "time reduction per tap" : "Deviant Level"}</p>
+                    <p className="text-[10px] leading-[1]">{isIncubation ? "time reduction per tap" : "Deviant Level"}</p>
                   </div>
-                  <p className="text-sm">{isIncubation ? "1s" : "Natura"}</p>
+                  <p className="text-xs">{isIncubation ? "1s" : "Natura"}</p>
                 </div>
                 <div className="flex justify-between">
-                  <div className="flex items-center space-x-0.5">
+                  <div className="flex items-center ">
                     {isIncubation && <EnergySVG />}
-                    <p className="text-xs">{isIncubation ? "available energy" : "Deviant XP"}</p>
+                    <p className="text-[10px] leading-[1]">{isIncubation ? "available energy" : "Deviant XP"}</p>
                   </div>
 
-                  <p className="text-sm">{isIncubation ? "75/100" : "245/1000"}</p>
+                  <p className="text-xs">{isIncubation ? "75/100" : "245/1000"}</p>
                 </div>
               </>
             )}
@@ -72,7 +71,7 @@ export const StatsContainer = ({ isEmpty, isIncubation }) => {
             <div className="relative h-[3rem] w-full flex justify-between uppercase ">
               <div className="grow-0 shrink-0 flex flex-col justify-end gap-1 stats-box-maturity">
                 <div className="flex justify-between items-center">
-                  <p className="text-[10px] font-bowlbyregular">Deviant Progress</p>
+                  <p className="text-[10px] font-bowlbyregular">Maturity</p>
                   <p className="text-[12px] font-bowlbyregular">N/A</p>
                 </div>
                 <DeviantMaturityBar
@@ -85,7 +84,7 @@ export const StatsContainer = ({ isEmpty, isIncubation }) => {
             <div className="relative h-[3rem] w-full flex justify-between uppercase ">
               <div className="grow-0 shrink-0 flex flex-col justify-end gap-1 stats-box-maturity">
                 <div className="flex justify-between items-center">
-                  <p className="text-[10px] font-bowlbyregular">{isIncubation ? "incubation progress" : "Deviant maturity"}</p>
+                  <p className="text-[10px] font-bowlbyregular">{isIncubation ? "Progress" : "Maturity"}</p>
                   <p className="text-[12px] font-bowlbyregular">{`${percent}%`}</p>
                 </div>
                 <DeviantMaturityBar

@@ -1,9 +1,32 @@
+import { useRef } from "react";
 import { pillar } from "../assets";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
+import gsap from "gsap/all";
 
 export const LoreThree = () => {
+  const mainContainer = useRef();
+  const textLore = useRef();
+  useGSAP(() => {
+    const text1 = new SplitType(textLore.current, { types: 'words, chars' })
+    gsap.from(text1.chars, {
+      opacity: 0,
+      duration: 0.1,
+      stagger: { amount: 2 },
+    })
+
+    gsap.to(".pillar-lore", {
+      yPercent: 3,
+      yoyo:true,
+      ease: "sine.inOut",
+      duration: 1,
+      repeat: -1
+    })
+  }, { scope: mainContainer, revertOnUpdate: true})
+
   return (
-    <div className="flex justify-center w-full h-full relative overflow-hidden ">
-      <p className="px-[32px] text-base uppercase text-right text-white mt-20 leading-[100%] font-chakra font-normal">
+    <div ref={mainContainer} className="flex justify-center w-full h-full relative overflow-hidden ">
+      <p ref={textLore} className="px-[32px] text-base uppercase text-right text-white mt-20 leading-[100%] font-chakra font-normal">
         The Weavers of Space-Time, beings of pure energy, opened the ancient portals to Astra Nova, a hidden haven for the people of The Five Worlds as theirplanets were destroyed by an all-consuming
         entity of entropy and chaos...
       </p>
@@ -22,7 +45,7 @@ export const LoreThree = () => {
         <img
           src={pillar}
           alt="Pillar"
-          className="absolute bottom-[5%] left-1/2 -translate-x-1/2  w-[60%] max-h-[450px] object-contain object-center"
+          className="absolute pillar-lore bottom-[5%] left-1/2 -translate-x-1/2  w-[60%] max-h-[450px] object-contain object-center"
         />
 
       </div>
