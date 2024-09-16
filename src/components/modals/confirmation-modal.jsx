@@ -32,9 +32,9 @@ export const ConfirmationModal = ({ children }) => {
 
         <DialogClose asChild>
           <div className="flex flex-col gap-2 lining-nums proportional-nums text-white tracking-[-0.64px] font-bowlby">
-            <Button className="bg-[#AAA] rounded-lg p-4 w-full">cancel</Button>
+            <Button className="bg-[#AAA] rounded-lg py-6 w-full">cancel</Button>
             <Button
-              className="rounded-lg p-4 w-full"
+              className="rounded-lg py-6 w-full"
               style={{ background: "linear-gradient(90deg, #FF7C52 0%, #FF110B 100%)" }}
             >
               upgrade
