@@ -10,7 +10,7 @@ export function Modal({ title, description, triggerButton, footer, children, dis
     
     >
       <DialogOverlay className={cn({'bg-transparent':noBackdrop})}/>
-      {triggerButton}
+      <DialogTrigger asChild>{triggerButton}</DialogTrigger>
       <DialogContent
         className={cn(className)}
         disabledCloseButton={disabledCloseButton}
