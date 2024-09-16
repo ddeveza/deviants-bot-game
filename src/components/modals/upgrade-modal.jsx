@@ -3,10 +3,73 @@ import { Modal } from "../modal";
 import { StatUpgrade } from "../stat-upgrades";
 import { Button } from "../ui/button";
 import { DialogClose } from "../ui/dialog";
+import { useState } from "react";
+
+const statsUpgradeMenu = [
+  {
+    attribute: "HP",
+    currentLvl: 1,
+    xp: 500,
+    icon: <HpSVG />,
+    iconColor: "#3BFBE4",
+  },
+  {
+    attribute: "Power",
+    currentLvl: 1,
+    xp: 500,
+    icon: <PowerSVG />,
+    iconColor: "#FF6A61",
+  },
+  {
+    attribute: "max energy",
+    currentLvl: 1,
+    xp: 200,
+    icon: <EnergySVG />,
+    iconColor: "#06CAFF",
+  },
+  {
+    attribute: "Restore",
+    currentLvl: 1,
+    xp: 200,
+    icon: <RestoreSVG />,
+    iconColor: "#3BFBE4",
+  },
+];
+
+const statsFullUpgradeMenu = [
+  {
+    attribute: "HP",
+    currentLvl: 1,
+    xp: 0.1,
+    icon: <HpSVG />,
+    iconColor: "white",
+  },
+  {
+    attribute: "Power",
+    currentLvl: 1,
+    xp: 0.1,
+    icon: <PowerSVG />,
+  },
+  {
+    attribute: "max energy",
+    currentLvl: 1,
+    xp: 0.2,
+    icon: <EnergySVG />,
+  },
+  {
+    attribute: "Restore",
+    currentLvl: 1,
+    xp: 0.2,
+    icon: <RestoreSVG />,
+  },
+];
 
 export const UpgradeModal = ({ children }) => {
+  //TODO: use global state for modal
+ 
   return (
     <Modal
+     
       title="Upgrade Deviant"
       description="Upgrades a Deviant's stats"
       triggerButton={children}
@@ -25,42 +88,24 @@ export const UpgradeModal = ({ children }) => {
         <div className="flex flex-col mt-3">
           <p className="text-xs uppercase my-2 font-ibmMono">base stats</p>
           <div className="grid grid-cols-2 gap-2">
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"HP"}
-                currentLvl={1}
-                xp={500}
-                icon={<HpSVG />}
-                iconColor={"#3BFBE4"}
-              />
-            </div>
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"Power "}
-                currentLvl={1}
-                xp={500}
-                icon={<PowerSVG />}
-                iconColor={"#FF6A61"}
-              />
-            </div>
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"max energy"}
-                currentLvl={1}
-                xp={200}
-                icon={<EnergySVG />}
-                iconColor={"#06CAFF"}
-              />
-            </div>
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"HP"}
-                currentLvl={1}
-                xp={200}
-                icon={<RestoreSVG />}
-                iconColor={"#3BFBE4"}
-              />
-            </div>
+            {statsUpgradeMenu.map(({ attribute, currentLvl, xp, icon, iconColor }) => (
+              <div
+                key={attribute}
+                className="col-span-1"
+               
+              >
+                
+                  <StatUpgrade
+                    attribute={attribute}
+                    currentLvl={currentLvl}
+                    xp={xp}
+                    icon={icon}
+                    iconColor={iconColor}
+                 
+                    />
+                    
+              </div>
+            ))}
           </div>
         </div>
 
@@ -68,43 +113,21 @@ export const UpgradeModal = ({ children }) => {
         <div className="flex flex-col mt-3">
           <p className="text-xs uppercase my-2 font-ibmMono">full upgrade</p>
           <div className="grid grid-cols-2 gap-2">
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"HP"}
-                currentLvl={1}
-                xp={0.1}
-                icon={<HpSVG />}
-                iconColor={"white"}
-                isFullUpgrade={true}
-              />
-            </div>
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"Power "}
-                currentLvl={1}
-                xp={0.1}
-                icon={<PowerSVG />}
-                isFullUpgrade={true}
-              />
-            </div>
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"max energy"}
-                currentLvl={1}
-                xp={0.2}
-                icon={<EnergySVG />}
-                isFullUpgrade={true}
-              />
-            </div>
-            <div className="col-span-1">
-              <StatUpgrade
-                attribute={"HP"}
-                currentLvl={1}
-                xp={0.2}
-                icon={<RestoreSVG />}
-                isFullUpgrade={true}
-              />
-            </div>
+            {statsFullUpgradeMenu.map((upgrade) => (
+              <div
+                key={upgrade.attribute}
+                className="col-span-1"
+              >
+                <StatUpgrade
+                  attribute={upgrade.attribute}
+                  currentLvl={upgrade.currentLvl}
+                  xp={upgrade.xp}
+                  icon={upgrade.icon}
+                  iconColor={upgrade?.iconColor}
+                  isFullUpgrade
+                />
+              </div>
+            ))}
           </div>
         </div>
         <div className="flex m-auto translate-y-20">

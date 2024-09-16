@@ -4,7 +4,13 @@ import { ConfirmationModal } from "./modals/confirmation-modal";
 export const StatUpgrade = ({ attribute, icon, currentLvl, xp, iconColor, isFullUpgrade }) => {
   const upgradeLevel = isFullUpgrade ? currentLvl + 4 : currentLvl + 1;
   return (
-    <ConfirmationModal>
+    <ConfirmationModal
+     
+      attribute={attribute}
+      currentLevel={currentLvl}
+      upgradeLevel={upgradeLevel}
+      cost={`${xp} ${isFullUpgrade ? "TON" : "XP"}`}
+    >
       <div
         className="flex gap-3 bg-[#E8E8E8] rounded-xl p-2 items-center"
         style={{

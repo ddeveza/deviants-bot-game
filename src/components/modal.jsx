@@ -1,14 +1,16 @@
 import { cn } from "@/lib/utils";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogOverlay, DialogTitle, DialogTrigger } from "./ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
-export function Modal({ title, description, triggerButton, footer, children, disabledCloseButton = false, className, open, setOpen }) {
+export function Modal({ title, description, triggerButton, footer, children, disabledCloseButton = false, className, open, setOpen , noBackdrop=false }) {
   return (
     <Dialog
       open={open}
       onOpenChange={setOpen}
+    
     >
-      <DialogTrigger asChild>{triggerButton}</DialogTrigger>
+      <DialogOverlay className={cn({'bg-transparent':noBackdrop})}/>
+      {triggerButton}
       <DialogContent
         className={cn(className)}
         disabledCloseButton={disabledCloseButton}
