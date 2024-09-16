@@ -3,12 +3,15 @@ import { Modal } from "../modal";
 import { Button } from "../ui/button";
 import { DialogClose } from "../ui/dialog";
 
-export const ConfirmationModal = ({ children, attribute, currentLevel, upgradeLevel, cost }) => {
+export const ConfirmationModal = ({ children, attribute, currentLevel, upgradeLevel, cost ,open , onClose }) => {
+  const handleClose = () => {
+    onClose(false);
+  }
   return (
     <Modal
+      open={open}
       title="Upgrade Deviant"
       description="Upgrades a Deviant's stats"
-      triggerButton={children}
       disabledCloseButton
       className="max-w-[360px] bg-[#BBB] border-none rounded-3xl sm:rounded-3xl p-0 min-h-[300px] translate-y-[-60%]"
     >
@@ -30,17 +33,18 @@ export const ConfirmationModal = ({ children, attribute, currentLevel, upgradeLe
           <p className="font-bowlby text-xl leading-[20px] uppercase lining-nums proportional-nums">{cost}</p> {/*Change cost*/}
         </div>
 
-        <DialogClose asChild>
+       
           <div className="flex flex-col gap-2 lining-nums proportional-nums text-white tracking-[-0.64px] font-bowlby">
-            <Button className="bg-[#AAA] rounded-lg py-6 w-full">cancel</Button>
+            <Button className="bg-[#AAA] rounded-lg py-6 w-full" onClick={handleClose}>cancel</Button>
             <Button
               className="rounded-lg py-6 w-full"
               style={{ background: "linear-gradient(90deg, #FF7C52 0%, #FF110B 100%)" }}
+              onClick={handleClose}
             >
               upgrade
             </Button>
           </div>
-        </DialogClose>
+        
       </div>
     </Modal>
   );

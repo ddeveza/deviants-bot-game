@@ -4,6 +4,7 @@ import { StatUpgrade } from "../stat-upgrades";
 import { Button } from "../ui/button";
 import { DialogClose } from "../ui/dialog";
 import { useState } from "react";
+import { ConfirmationModal } from "./confirmation-modal";
 
 const statsUpgradeMenu = [
   {
@@ -66,10 +67,19 @@ const statsFullUpgradeMenu = [
 
 export const UpgradeModal = ({ children }) => {
   //TODO: use global state for modal
- 
+  const [open, setOpen] = useState(false);
+  const [openIndividualUpgrade, setOpenIndividualUpgrade] = useState(false);
+  const [selectedUpgrade, setSelectedUpgrade] = useState(null);
+  const handleOpenConfirmation = (upgrade) => {
+    setSelectedUpgrade(upgrade);
+    setOpen(false) //close upgrade menu
+    setOpenIndividualUpgrade(true)
+  }
   return (
+    <>
     <Modal
-     
+      open={open}
+      setOpen={setOpen}
       title="Upgrade Deviant"
       description="Upgrades a Deviant's stats"
       triggerButton={children}
@@ -92,18 +102,15 @@ export const UpgradeModal = ({ children }) => {
               <div
                 key={attribute}
                 className="col-span-1"
-               
+                onClick = {()=>{handleOpenConfirmation({attribute, currentLvl, xp, icon, iconColor, isFullUpgrade:true})}}
               >
-                
-                  <StatUpgrade
-                    attribute={attribute}
-                    currentLvl={currentLvl}
-                    xp={xp}
-                    icon={icon}
-                    iconColor={iconColor}
-                 
-                    />
-                    
+                <StatUpgrade
+                  attribute={attribute}
+                  currentLvl={currentLvl}
+                  xp={xp}
+                  icon={icon}
+                  iconColor={iconColor}
+                />
               </div>
             ))}
           </div>
@@ -117,6 +124,7 @@ export const UpgradeModal = ({ children }) => {
               <div
                 key={upgrade.attribute}
                 className="col-span-1"
+                onClick = {()=>{handleOpenConfirmation({...upgrade, isFullUpgrade:true})}}
               >
                 <StatUpgrade
                   attribute={upgrade.attribute}
@@ -137,5 +145,15 @@ export const UpgradeModal = ({ children }) => {
         </div>
       </div>
     </Modal>
+    <ConfirmationModal
+      onClose={setOpenIndividualUpgrade}
+      open={openIndividualUpgrade}
+      attribute={selectedUpgrade?.attribute}
+      currentLevel={selectedUpgrade?.currentLvl}
+      upgradeLevel={selectedUpgrade?.upgradeLevel}
+      cost={`${selectedUpgrade?.xp} ${selectedUpgrade?.isFullUpgrade ? "TON" : "XP"}`}
+    />
+    </>
+    
   );
 };
